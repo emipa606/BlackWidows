@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>ButcheredHumanlikeCorpseWidow</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>5</stackLimit>
+    <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>I butchered humanlike</label>
+        <description>Butchering that sentient has set my mouth to watering. My brood mind is clamoring for me to feast.</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>KnowButcheredHumanlikeCorpseWidow</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>we butchered humanlike</label>
+        <description>We've butchered someone up like an animal. My brood mind hungers.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteHumanlikeMeatDirectWidow</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <requiredTraits>
+      <li>WombMind</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>widow direct cannibalism</label>
+        <description>I ate the meat of another sentient. My brood mind is satisfied, but uncooked meat is rather gross.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteHumanlikeMeatWidow</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <requiredTraits>
+      <li>WombMind</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>widow direct cannibalism</label>
+        <description>I ate the meat of another sentient. My brood mind is satisfied, but uncooked meat is rather gross.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteHumanlikeMeatAsIngredientWidow</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <requiredTraits>
+      <li>WombMind</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>widow cannibalism</label>
+        <description>I ate a meal made from the meat of another sentient. So pleasurable, and now my brood mind is satisfied. If only I had some fava beans and a nice chianti.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>AteRegularMeatAsIngredientWidow</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <requiredTraits>
+      <li>WombMind</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>widow cannibalism</label>
+        <description>I ate a meal made from the meat of a non-sentient. The taste of such unrefined flesh has set my brood mind to grumbling.</description>
+        <baseMoodEffect>-2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>WidowAteRegularIngredientDirect</defName>
+    <showBubble>true</showBubble>
+    <icon>Things/Mote/ThoughtSymbol/Food</icon>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <requiredTraits>
+      <li>WombMind</li>
+    </requiredTraits>
+    <stages>
+      <li>
+        <label>widow cannibalism</label>
+        <description>I ate the raw flesh of a nonsentient creature. Its unrefined taste has set my brood mind to grumbling.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>BionicBroodmind</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>BlackWidowIntegratedBroodMind</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>bionically housed brood mind</label>
+        <description>My brood mind feels so... cozy.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>MilkyMilkedSelfMoodWidow</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>recently gathered silk from self</label>
+        <description>This silk will surely help the colony!</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>MilkyMilkedWidow</defName>
+    <showBubble>true</showBubble>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>silk was lovingly gathered</label>
+        <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+    </stages>
+    <thoughtToMake>MilkyMilkedMoodWidow</thoughtToMake>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>MilkyMilkedMoodWidow</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>3</stackLimit>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>recently had silk gathered</label>
+        <description>I've had my silk gathered by my lover. It felt nice.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>MilkyMilkWidow</defName>
+    <showBubble>true</showBubble>
+    <thoughtClass>Thought_MemorySocial</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>300</stackLimit>
+    <stackedEffectMultiplier>0.88</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>gathered silk from lover</label>
+        <baseOpinionOffset>10</baseOpinionOffset>
+      </li>
+    </stages>
+    <thoughtToMake>MilkyMilkMoodWidow</thoughtToMake>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>MilkyMilkMoodWidow</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>10</stackLimit>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <stages>
+      <li>
+        <label>gathered silk from lover</label>
+        <description>I gathered silk from my lover. Whyyyy.</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

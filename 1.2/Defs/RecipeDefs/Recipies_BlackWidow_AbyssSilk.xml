@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>Make_BWAbyssSilk</defName>
+    <label>make abyss silk</label>
+    <description>Weave together widow silk and throne silk to create abyss silk.</description>
+    <jobString>Weaving abyss silk.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <recipeUsers>
+      <li>ElectricTailoringBench</li>
+      <li>HandTailoringBench</li>
+      <li>CraftingSpot</li>
+    </recipeUsers>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>1500</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WidowSilk</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ThroneSilk</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WidowSilk</li>
+        <li>ThroneSilk</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AbyssSilk>2</AbyssSilk>
+    </products>
+    <researchPrerequisite>BWAbyssSilk</researchPrerequisite>
+    <skillRequirements>
+      <Crafting>15</Crafting>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+</Defs>

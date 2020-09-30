@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- BW Slash -->
+  <ToolCapacityDef>
+    <defName>BW_Slash</defName>
+  </ToolCapacityDef>
+  <DamageDef ParentName="Bite">
+    <defName>BW_Slash</defName>
+    <label>black widow slash</label>
+    <additionalHediffs>
+      <li>
+        <hediff>BW_SlashDamage</hediff>
+        <severityPerDamageDealt>0.01</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  <ManeuverDef>
+    <defName>BW_Slash</defName>
+    <requiredCapacity>BW_Slash</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>BW_Slash</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Scratch_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Scratch_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Scratch_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Scratch_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+  <HediffDef>
+    <defName>BW_SlashDamage</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <label>widow slash bleeding</label>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>300</min>
+          <max>900</max>
+        </disappearsAfterTicks>
+      </li>
+      <li Class="JecsTools.HediffCompProperties_DamageOverTime">
+        <cycleInTicks>30</cycleInTicks>
+        <!--<power>10</power>-->
+        <cycleDamage>Scratch</cycleDamage>
+        <spreadChance>2</spreadChance>
+        <cycleDamageAmt>2</cycleDamageAmt>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>initial</label>
+        <minSeverity>0.04</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.125</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.40</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.25</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>serious</label>
+        <minSeverity>0.60</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.40</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.80</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.50</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <!-- BW Puncture -->
+  <ToolCapacityDef>
+    <defName>BW_Puncture</defName>
+  </ToolCapacityDef>
+  <DamageDef ParentName="Bite">
+    <defName>BW_Puncture</defName>
+    <label>black widow puncture</label>
+    <!--<AddHediffChance>0.45</AddHediffChance>
+		<HediffToAdd>BW_PunctureDamage</HediffToAdd>		
+        <severityPerDamageDealt>0.10</severityPerDamageDealt>-->
+    <additionalHediffs>
+      <li>
+        <hediff>BW_PunctureDamage</hediff>
+        <severityPerDamageDealt>0.10</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  <ManeuverDef>
+    <defName>BW_Puncture</defName>
+    <requiredCapacity>BW_Puncture</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>BW_Puncture</meleeDamageDef>
+    </verb>
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Stab_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Stab_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Stab_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+  <HediffDef>
+    <defName>BW_PunctureDamage</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Puncture Knockdown</label>
+    <displayWound>true</displayWound>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>60</min>
+          <max>180</max>
+        </disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>pulverized to nothing</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.00625</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>pulverized to nothing</destroyedLabel>
+      <destroyedOutLabel>pulverized to nothing</destroyedOutLabel>
+    </injuryProps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.0</postFactor>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.0</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <!-- BW Mind Blast -->
+  <ToolCapacityDef>
+    <defName>BW_MindBlast</defName>
+  </ToolCapacityDef>
+  <!--<DamageDef ParentName="Bite">
+        <defName>BW_MindBlast</defName>
+        <label>mind jewel mind blast</label>-->
+  <!--<hediff>BW_MindBlastDamage</hediff>-->
+  <!--<additionalHediffs>
+            <li>
+			<hediff>BW_MindBlastDamage</hediff>
+            </li>
+        </additionalHediffs>
+    </DamageDef>-->
+  <JecsTools.DamageDefCleave>
+    <defName>BW_MindBlast</defName>
+    <label>mind blast</label>
+    <workerClass>JecsTools.DamageWorker_Cleave</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been blasted to death.</deathMessage>
+    <hediff>Scratch</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <additionalHediffs>
+      <li>
+        <hediff>BW_MindBlastDamage</hediff>
+        <severityPerDamageDealt>0.10</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+    <cleaveFactor>0.8</cleaveFactor>
+    <cleaveDamage>Scratch</cleaveDamage>
+  </JecsTools.DamageDefCleave>
+  <ManeuverDef>
+    <defName>BW_MindBlast</defName>
+    <requiredCapacity>BW_MindBlast</requiredCapacity>
+    <verb>
+      <verbClass>Verb_MeleeAttackDamage</verbClass>
+      <meleeDamageDef>BW_MindBlast</meleeDamageDef>
+    </verb>
+    <!--<PassiveProps>
+		  <worker>AbilityUser.PassiveEffectWorker</worker>
+		  <hediffs>
+			<li>BW_MindBlastDamage</li>
+		  </hediffs>
+		</PassiveProps>-->
+    <logEntryDef>MeleeAttack</logEntryDef>
+    <combatLogRulesHit>Maneuver_Stab_MeleeHit</combatLogRulesHit>
+    <combatLogRulesDeflect>Maneuver_Stab_MeleeDeflect</combatLogRulesDeflect>
+    <combatLogRulesMiss>Maneuver_Stab_MeleeMiss</combatLogRulesMiss>
+    <combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
+  </ManeuverDef>
+  <HediffDef>
+    <defName>BW_MindBlastDamage</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>mind blast sickness</label>
+    <displayWound>true</displayWound>
+    <comps>
+      <!--<li Class="JecsTools.HediffCompProperties_Knockback">
+        <knockbackChance>0.0</knockbackChance>
+		<stunChance>1000.0</stunChance>
+		<stunTicks>1800</stunTicks>
+		<knockDistance>
+		  <min>2</min>
+		  <max>3</max>
+		</knockDistance>
+		<explosiveKnockback>false</explosiveKnockback>
+		<explosionDmg>Stun</explosionDmg>
+      </li>-->
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>60</min>
+          <max>180</max>
+        </disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>blasted to nothing</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.00625</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>blasted to nothing</destroyedLabel>
+      <destroyedOutLabel>blasted to nothing</destroyedOutLabel>
+    </injuryProps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.8</postFactor>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.5</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

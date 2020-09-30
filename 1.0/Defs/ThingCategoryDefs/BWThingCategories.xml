@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingCategoryDef>
+    <defName>BWTextiles</defName>
+    <label>black widow textiles</label>
+    <parent>Manufactured</parent>
+    <iconPath>UI/Icons/ThingCategories/Textiles</iconPath>
+    <resourceReadoutRoot>true</resourceReadoutRoot>
+  </ThingCategoryDef>
+</Defs>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Implants -->
+  <HediffDef ParentName="DiseaseBase">
+    <defName>MatingPsychosis</defName>
+    <label>mating psychosis</label>
+    <labelNoun>the widow seems disturbed</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>1000</min>
+          <max>3000</max>
+        </disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_RecoveryThought">
+        <thought>Catharsis</thought>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <socialFightChanceFactor>5.0</socialFightChanceFactor>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

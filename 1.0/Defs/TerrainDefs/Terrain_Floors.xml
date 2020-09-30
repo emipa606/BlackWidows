@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TerrainDef Name="BWFloorBase" Abstract="True">
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+    <designationCategory>Floors</designationCategory>
+    <fertility>0</fertility>
+    <constructEffect>ConstructDirt</constructEffect>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+  </TerrainDef>
+  <TerrainDef Name="BWBurnedFloorBase" Abstract="True">
+    <layerable>true</layerable>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+    <pathCost>4</pathCost>
+    <fertility>0</fertility>
+    <acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+    <statBases>
+      <Beauty>-1</Beauty>
+    </statBases>
+  </TerrainDef>
+  <!-- ================= Plywood ================= -->
+  <TerrainDef ParentName="BWFloorBase">
+    <defName>BWWebFloor</defName>
+    <label>webbed abyss floor</label>
+    <renderPrecedence>245</renderPrecedence>
+    <description>Black widows often construct palaces suspended by webs over abysses leading deep into the earth. With much digging and effort, such flooring can be approximated even in the rim. This web flooring combines dense silk spinning with a golden framework to create a beautiful, if expensive and slightly terrifying, flooring option. Widows actually move faster on this incredible flooring!</description>
+    <texturePath>Terrain/Surfaces/BWWebFloor</texturePath>
+    <burnedDef>BWBurnedWebTile</burnedDef>
+    <statBases>
+      <Beauty>2</Beauty>
+      <WorkToBuild>800</WorkToBuild>
+      <Flammability>0.55</Flammability>
+    </statBases>
+    <costList>
+      <WidowSilk>2</WidowSilk>
+      <Gold>1</Gold>
+    </costList>
+    <constructEffect>ConstructDirt</constructEffect>
+    <researchPrerequisites>
+      <li>Stonecutting</li>
+    </researchPrerequisites>
+    <pathCost>10</pathCost>
+    <modExtensions>
+      <li Class="MPC.TerrainCost">
+        <costToAdd>100</costToAdd>
+        <costToRefund>15</costToRefund>
+        <tags>
+          <li>BlackWidow</li>
+        </tags>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+  <TerrainDef ParentName="BWBurnedFloorBase">
+    <defName>BWBurnedWebTile</defName>
+    <label>burned web floor frame</label>
+    <renderPrecedence>251</renderPrecedence>
+    <description>A black widow web floor, but the webs have burned away.</description>
+    <texturePath>Terrain/Surfaces/BurnedFloorBWWeb</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <pathCost>150</pathCost>
+  </TerrainDef>
+  <TerrainDef ParentName="BWFloorBase">
+    <defName>BWWebFloorBasic</defName>
+    <label>webbed abyss floor</label>
+    <renderPrecedence>245</renderPrecedence>
+    <description>Black widows often construct palaces suspended by webs over abysses leading deep into the earth. With much digging and effort, such flooring can be approximated even in the rim. This web flooring combines dense silk spinning with a steel framework to create an attractive, if expensive and slightly terrifying, flooring option.</description>
+    <texturePath>Terrain/Surfaces/BWBasicWebFloor</texturePath>
+    <burnedDef>BWBasicBurnedWebTile</burnedDef>
+    <statBases>
+      <Beauty>1</Beauty>
+      <WorkToBuild>400</WorkToBuild>
+      <Flammability>0.65</Flammability>
+    </statBases>
+    <costList>
+      <WidowSilk>2</WidowSilk>
+      <Steel>1</Steel>
+    </costList>
+    <constructEffect>ConstructDirt</constructEffect>
+    <researchPrerequisites>
+      <li>Stonecutting</li>
+    </researchPrerequisites>
+    <pathCost>10</pathCost>
+    <modExtensions>
+      <li Class="MPC.TerrainCost">
+        <costToAdd>100</costToAdd>
+        <costToRefund>10</costToRefund>
+        <tags>
+          <li>BlackWidow</li>
+        </tags>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+  <TerrainDef ParentName="BWBurnedFloorBase">
+    <defName>BWBurnedWebTile</defName>
+    <label>burned web floor frame</label>
+    <renderPrecedence>251</renderPrecedence>
+    <description>A black widow web floor, but the webs have burned away.</description>
+    <texturePath>Terrain/Surfaces/BurnedFloorBWWeb</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <pathCost>150</pathCost>
+  </TerrainDef>
+  <TerrainDef ParentName="BWBurnedFloorBase">
+    <defName>BWBasicBurnedWebTile</defName>
+    <label>burned web floor frame</label>
+    <renderPrecedence>251</renderPrecedence>
+    <description>A basic black widow web floor, but the webs have burned away.</description>
+    <texturePath>Terrain/Surfaces/BurnedFloorBWWebBasic</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <pathCost>150</pathCost>
+  </TerrainDef>
+  <TerrainDef ParentName="BWFloorBase">
+    <defName>BWAbyssFloor</defName>
+    <label>black widow abyss floor</label>
+    <renderPrecedence>245</renderPrecedence>
+    <description>Black widows often construct palaces suspended by webs over abysses leading deep into the earth. With much digging and effort, such flooring can be approximated even in the rim. The abyss floor appears to have drop into infinite nothingness, but invisible, gossamer strings do allow egress, albeit very slowly.</description>
+    <texturePath>Terrain/Surfaces/BWAbyssFloor</texturePath>
+    <burnedDef>BWBurnedWebTile</burnedDef>
+    <statBases>
+      <Beauty>0</Beauty>
+      <WorkToBuild>350</WorkToBuild>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <costList>
+      <WidowSilk>1</WidowSilk>
+    </costList>
+    <constructEffect>ConstructDirt</constructEffect>
+    <researchPrerequisites>
+      <li>Stonecutting</li>
+    </researchPrerequisites>
+    <pathCost>150</pathCost>
+    <modExtensions>
+      <li Class="MPC.TerrainCost">
+        <costToAdd>100</costToAdd>
+        <costToRefund>125</costToRefund>
+        <tags>
+          <li>BlackWidow</li>
+        </tags>
+      </li>
+    </modExtensions>
+  </TerrainDef>
+  <TerrainDef ParentName="BWFloorBase">
+    <defName>BWGardenSoil</defName>
+    <label>black widow garden soil</label>
+    <texturePath>Terrain/Surfaces/BWGardenFloor</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <acceptTerrainSourceFilth>False</acceptTerrainSourceFilth>
+    <renderPrecedence>340</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>-.5</Beauty>
+      <Cleanliness>-1</Cleanliness>
+      <WorkToBuild>250</WorkToBuild>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <costList>
+      <Meat_Human>2</Meat_Human>
+    </costList>
+    <constructEffect>ConstructDirt</constructEffect>
+    <researchPrerequisites>
+      <li>BWGardens</li>
+    </researchPrerequisites>
+    <!--<scatterType>Rocky</scatterType>-->
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <!--<li>Diggable</li>-->
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>1.1</fertility>
+    <takeFootprints>True</takeFootprints>
+    <tools>
+      <li>
+        <label>dirt</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>DirtInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </TerrainDef>
+</Defs>

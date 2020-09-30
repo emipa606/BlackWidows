@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <WidowMilkProgress>Silk progress: {0}</WidowMilkProgress>
+  <WidowResourceProgress>Silk progress: {0}</WidowResourceProgress>
+  <BlackWidowStartDialogue>The two of you barely escaped the pirates' attack on your interstellar cruiser. Now stranded on a unknown rimworld, you must establish dominance in order to survive. As you emerge almost resourceless from the wreckage of your destroyed warship, you discuss what to do next. You are powerful. You can surely conquer this world. But you must be cautious. With no resources, every step on the path toward dominance could be your last.</BlackWidowStartDialogue>
+  <UF_ContainsIngredient>Contains {0} / {1} {2}.</UF_ContainsIngredient>
+  <UF_ContainsProduct>Contains {0} / {1} {2}.</UF_ContainsProduct>
+  <UF_NoIngredient>need ingredients</UF_NoIngredient>
+  <UF_Progress>Progress: {0} ({1})</UF_Progress>
+  <UF_NonIdealInfluences>Non-ideal {0}.</UF_NonIdealInfluences>
+  <UF_NonIdealSpeedFactor>Speed: {0}</UF_NonIdealSpeedFactor>
+  <UF_IdealSafeProductionTemperature>Ideal (safe) production temp</UF_IdealSafeProductionTemperature>
+  <UF_Finished>Finished</UF_Finished>
+  <UF_Ideal>Ideal</UF_Ideal>
+  <UF_Safe>Safe</UF_Safe>
+  <UF_WeatherTemperature>temperature</UF_WeatherTemperature>
+  <UF_WeatherSunshine>sunshine</UF_WeatherSunshine>
+  <UF_WeatherRain>rain</UF_WeatherRain>
+  <UF_WeatherSnow>snow</UF_WeatherSnow>
+  <UF_WeatherWind>wind</UF_WeatherWind>
+
+</LanguageData>

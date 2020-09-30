@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>MilkyLover</defName>
+    <driverClass>Milky.JobDriver_MilkHumanoid</driverClass>
+    <reportString>gathering silk from TargetA.</reportString>
+  </JobDef>
+  <JobDef>
+    <defName>MilkyOther</defName>
+    <driverClass>Milky.JobDriver_MilkHumanoid</driverClass>
+    <reportString>gathering silk from TargetA.</reportString>
+  </JobDef>
+  <JobDef>
+    <defName>MilkySelf</defName>
+    <driverClass>Milky.JobDriver_MilkSelf</driverClass>
+    <reportString>gathering silk from self.</reportString>
+  </JobDef>
+  <JobDef>
+    <defName>FillUniversalFermenter</defName>
+    <driverClass>Kubouch.JobDriver_FillUniversalFermenter</driverClass>
+    <reportString>filling TargetA.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+  <JobDef>
+    <defName>TakeProductOutOfUniversalFermenter</defName>
+    <driverClass>Kubouch.JobDriver_TakeProductOutOfUniversalFermenter</driverClass>
+    <reportString>taking product out of TargetA.</reportString>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

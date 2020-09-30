@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef Name="FactionBlackWidow" Abstract="True">
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,45)</li>
+        <li>(80, 60)</li>
+        <li>(750, 125)</li>
+        <li>(1500, 250)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+  </FactionDef>
+  <FactionDef ParentName="FactionBlackWidow">
+    <defName>BlackWidow</defName>
+    <label>Black Widow Nest</label>
+    <description>A small community of Black Widows.\n\nThese people have come here to expand the borders of their empire and capture potential mates.</description>
+    <pawnSingular>black widow</pawnSingular>
+    <pawnsPlural>black widows</pawnsPlural>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(700, 0.5)</li>
+        <li>(900, 0.75)</li>
+        <li>(1200, 1)</li>
+        <li>(4000, 1.5)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Matron</leaderTitle>
+    <startingGoodwill>
+      <min>-100</min>
+      <max>25</max>
+    </startingGoodwill>
+    <factionNameMaker>NamerFactionPirate</factionNameMaker>
+    <settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
+    <hairTags>
+      <li>Urban</li>
+    </hairTags>
+    <techLevel>Spacer</techLevel>
+    <backstoryCategories>
+      <li>Civil</li>
+      <li>Tribal</li>
+    </backstoryCategories>
+    <settlementTexturePath>Things/World/BlackWidow</settlementTexturePath>
+    <factionIconPath>Things/World/BlackWidow</factionIconPath>
+    <naturalColonyGoodwill>
+      <min>-80</min>
+      <max>10</max>
+    </naturalColonyGoodwill>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+      <li>Caravan_Outlander_PirateMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_BlackWidow_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>50</max>
+    </allowedArrivalTemperatureRange>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <options>
+          <BlackWidow>150</BlackWidow>
+          <BlackWidowReaver>200</BlackWidowReaver>
+          <BlackWidowMatron>50</BlackWidowMatron>
+          <BlackWidowSniper>100</BlackWidowSniper>
+          <BlackWidowSlasher>150</BlackWidowSlasher>
+          <BlackWidowGrenadier>150</BlackWidowGrenadier>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <BlackWidow>150</BlackWidow>
+          <BlackWidowReaver>200</BlackWidowReaver>
+          <BlackWidowMatron>50</BlackWidowMatron>
+          <BlackWidowSniper>100</BlackWidowSniper>
+          <BlackWidowSlasher>150</BlackWidowSlasher>
+          <BlackWidowGrenadier>150</BlackWidowGrenadier>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <BlackWidowTrader>1</BlackWidowTrader>
+        </traders>
+        <carriers>
+          <Muffalo>1</Muffalo>
+          <Dromedary>1</Dromedary>
+        </carriers>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <BlackWidow>50</BlackWidow>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <!--<expandingIconTexture>Things/World/BlackWidow</expandingIconTexture>-->
+  </FactionDef>
+</Defs>

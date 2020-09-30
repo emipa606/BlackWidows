@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <CommunityCoreLibrary.ModHelperDef>
+    <defName>BlackWidow</defName>
+    <ModName>BlackWidow</ModName>
+        <minCCLVersion>0.14.2</minCCLVersion>
+		<SpecialInjectors>
+			<li>BlackWidow.Detours.DetourInjector</li>
+			<li>BlackWidow.Detours.Detours</li>
+		</SpecialInjectors>
+	</CommunityCoreLibrary.ModHelperDef>
+</Defs>

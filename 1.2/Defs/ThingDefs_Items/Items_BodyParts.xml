@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <ThingDef Name="BodyPartBWBionicBase" ParentName="BodyPartProstheticBase" Abstract="True">
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItemBionic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>BWBionics</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef ParentName="BodyPartArchotechBase">
+    <defName>WombMind</defName>
+    <label>Black Widow Brood Mind</label>
+    <description>The mycelial tangles of a Black Widow's brood mind. Removed from her body, they still faintly pulse with psionic power.</description>
+    <!-- <tradeability>Sellable</tradeability> -->
+    <graphicData>
+      <texPath>Things/Item/WidowOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <Mass>4</Mass>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BodyPartArchotechBase">
+    <defName>CoreMind</defName>
+    <label>Black Widow Core Mind</label>
+    <description>A Black Widow core mind. Good in a pinch, probably...</description>
+    <tradeability>Sellable</tradeability>
+    <graphicData>
+      <texPath>Things/Item/WidowOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <Mass>4</Mass>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BodyPartBWBionicBase">
+    <defName>BionicPedipalp</defName>
+    <label>black widow bionic pedipalps</label>
+    <description>Bionic Black Widow pedipalps. Sharp and deadly, they significantly increase a widow's close combat prowess, at the expense of manipulation capacity. Their piercing strikes can be of such strength and ferocity that, when landed just right, they can knock down even the fiercest foes.</description>
+    <tradeability>Sellable</tradeability>
+    <graphicData>
+      <texPath>Things/Item/WidowOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <WidowSilk>35</WidowSilk>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <MarketValue>500</MarketValue>
+      <Mass>4</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+  <ThingDef ParentName="BodyPartProstheticBase">
+    <defName>SimpleProstheticSpiderLeg</defName>
+    <label>black widow prosthetic spider leg</label>
+    <description>A simple leg prosthesis designed for a Black Widow's unique physiognomy.</description>
+    <tradeability>Sellable</tradeability>
+    <graphicData>
+      <texPath>Things/Item/WidowOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <WidowSilk>25</WidowSilk>
+      <Steel>15</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>16000</WorkToMake>
+      <MarketValue>250</MarketValue>
+      <Mass>4</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Industrial</li>
+    </techHediffsTags>
+  </ThingDef>
+  <ThingDef ParentName="BodyPartBWBionicBase">
+    <defName>BlackWidowShredderLeg</defName>
+    <label>black widow shredder spider leg</label>
+    <description>Advanced biotic replacements for black widow legs. Though slightly slower than the biological legs that widows are born with, they are crafted with plasteel blades inset along their edges, adding substantially to a Widow's close combat potential for each leg improved, and inflicting a steadily worsening, consciousness draining bleed with every strike.</description>
+    <tradeability>Sellable</tradeability>
+    <graphicData>
+      <texPath>Things/Item/WidowOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <WidowSilk>45</WidowSilk>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <MarketValue>1000</MarketValue>
+      <Mass>4</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+  <ThingDef ParentName="BodyPartBWBionicBase">
+    <defName>BlackWidowSleipnirArm</defName>
+    <label>black widow sleipnir-reticulated bionic arm</label>
+    <description>Sleipnir reticulated bionic arm, dividing at the elbows into two separate fully functional lower arms and hands. They allow unprecedented manipulation ability.</description>
+    <tradeability>Sellable</tradeability>
+    <graphicData>
+      <texPath>Things/Item/WidowOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Spacer</techLevel>
+    <costList>
+      <WidowSilk>125</WidowSilk>
+      <Plasteel>35</Plasteel>
+      <ComponentSpacer>5</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <MarketValue>1500</MarketValue>
+      <Mass>4</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>BlackWidowHeartMind</defName>
+    <label>black widow bionic heart mind</label>
+    <description>The core mind of a black widow (what most normal sentients would consider their brains) is atrophied and weak due to co-evolution with the brood mind hosted in a widow's body. The heart mind amplifies and corrects this evolutionary deficit, bringing a widow's core mind to a level equal with that of a human. The impact on their overall cognitive ability is... drastic.</description>
+    <graphicData>
+      <texPath>Things/Item/WidowOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <costList>
+      <WidowSilk>45</WidowSilk>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <Mass>0.2</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+  <ThingDef ParentName="BodyPartBionicBase">
+    <defName>BlackWidowIntegratedBroodMind</defName>
+    <label>black widow integrated brood mind</label>
+    <description>The independent sentiences known as brood minds do not much care for being tampered with, but are happy to allow a widow to implant and alter her body to better house and protect them. Bionic womb mind shielding replaces a widow's biological uterus with an archotech quality mechanoid housing. This housing does little to change the operation of her brood mind, but it does amplify her ability to harness its energies without disturbing it, allowing widows to shrug off small quantities of damage with subdermally infused psionic shielding.</description>
+    <graphicData>
+      <texPath>Things/Item/WidowOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <costList>
+      <WidowSilk>45</WidowSilk>
+      <Plasteel>15</Plasteel>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MarketValue>5000</MarketValue>
+      <Mass>0.2</Mass>
+    </statBases>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+  </ThingDef>
+</Defs>

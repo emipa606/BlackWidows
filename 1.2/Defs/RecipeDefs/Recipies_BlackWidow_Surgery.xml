@@ -1,0 +1,898 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <!--<RecipeDef Abstract="True" Name="SurgeryFlesh">
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <workSkillLearnFactor>16</workSkillLearnFactor>
+  </RecipeDef> -->
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallWombMind</defName>
+    <label>install womb mind</label>
+    <description>Installs womb mind.</description>
+    <!--<workerClass>Recipe_InstallNaturalBodyPart</workerClass>-->
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing womb mind.</jobString>
+    <workAmount>2000</workAmount>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>
+          <defName>WombMind</defName>
+        </li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brood_Mind</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>WombMind</addsHediff>
+  </RecipeDef>
+  <!--<RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallCoreMind</defName>
+    <label>Install core mind</label>
+    <description>Installs Black Widow core mind.</description>
+    <workerClass>Recipe_InstallImplant</workerClass>
+    <jobString>Installing core mind.</jobString>
+    <workAmount>2000</workAmount>
+    <fixedIngredientFilter>
+        <categories>
+            <li>Medicine</li>
+        </categories>
+        <thingDefs>
+<li>
+    <defName>CoreMind</defName>
+</li>
+        </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+        <li>Core_Mind</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>CoreMind</addsHediff>
+</RecipeDef>-->
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallTRightArm</defName>
+    <label>install top right arm</label>
+    <description>Installs a black widow's top right arm.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing top right arm.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_TRightArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_TRightArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BWTRShoulder</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallBRightArm</defName>
+    <label>install bottom right arm</label>
+    <description>Installs a black widow's bottom right arm.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing bottom right arm.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_BRightArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_BRightArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BWBRShoulder</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallTLeftArm</defName>
+    <label>install top left arm</label>
+    <description>Installs a black widow's top left arm.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing top left arm.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_TLeftArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_TLeftArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BWTLShoulder</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallBLeftArm</defName>
+    <label>install bottom left arm</label>
+    <description>Installs a black widow's bottom left arm.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing bottom left arm.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_BLeftArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_BLeftArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BWBLShoulder</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallSecondLeftLeg</defName>
+    <label>install black widow leg</label>
+    <description>Installs a black widow's arachnine leg.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing black widow leg.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_BWLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_BWLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <!-- <li>Blackwidow_Legs</li> -->
+      <li>BlackWidowSecondLeftLeg</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallFirstLeftLeg</defName>
+    <label>install black widow leg</label>
+    <description>Installs a black widow's arachnine leg.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing black widow leg.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_BWLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_BWLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <!-- <li>Blackwidow_Legs</li> -->
+      <li>BlackWidowFirstLeftLeg</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallThirdLeftLeg</defName>
+    <label>install black widow leg</label>
+    <description>Installs a black widow's arachnine leg.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing black widow leg.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_BWLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_BWLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <!-- <li>Blackwidow_Legs</li> -->
+      <li>BlackWidowThirdLeftLeg</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallFourthLeftLeg</defName>
+    <label>install black widow leg</label>
+    <description>Installs a black widow's arachnine leg.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing black widow leg.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_BWLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_BWLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <!-- <li>Blackwidow_Legs</li> -->
+      <li>BlackWidowFourthLeftLeg</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallFirstRightLeg</defName>
+    <label>install black widow leg</label>
+    <description>Installs a black widow's arachnine leg.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing black widow leg.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_BWLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_BWLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <!-- <li>Blackwidow_Legs</li> -->
+      <li>BlackWidowFirstRightLeg</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallSecondRightLeg</defName>
+    <label>install black widow leg</label>
+    <description>Installs a black widow's arachnine leg.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing black widow leg.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_BWLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_BWLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <!-- <li>Blackwidow_Legs</li> -->
+      <li>BlackWidowSecondRightLeg</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallThirdRightLeg</defName>
+    <label>install black widow leg</label>
+    <description>Installs a black widow's arachnine leg.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing black widow leg.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_BWLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_BWLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <!-- <li>Blackwidow_Legs</li> -->
+      <li>BlackWidowThirdRightLeg</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>BlackWidow_InstallFourthRightLeg</defName>
+    <label>install black widow leg</label>
+    <description>Installs a black widow's arachnine leg.</description>
+    <workerClass>Recipe_InstallNaturalBodyPart</workerClass>
+    <jobString>Installing black widow leg.</jobString>
+    <workAmount>2000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BW_Item_BWLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BW_Item_BWLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <!-- <li>Blackwidow_Legs</li> -->
+      <li>BlackWidowFourthRightLeg</li>
+    </appliedOnFixedBodyParts>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallPegWidowLeg</defName>
+    <label>install peg leg on widow</label>
+    <description>Install a peg leg on a widow.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing peg leg on widow.</jobString>
+    <workAmount>1300</workAmount>
+    <surgerySuccessChanceFactor>1.40</surgerySuccessChanceFactor>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BlackWidowFirstRightLeg</li>
+      <li>BlackWidowSecondRightLeg</li>
+      <li>BlackWidowThirdRightLeg</li>
+      <li>BlackWidowFourthRightLeg</li>
+      <li>BlackWidowFirstLeftLeg</li>
+      <li>BlackWidowSecondLeftLeg</li>
+      <li>BlackWidowThirdLeftLeg</li>
+      <li>BlackWidowFourthLeftLeg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PegLeg</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallSimpleProstheticArmBlackWidow</defName>
+    <label>install prosthetic arm</label>
+    <description>Install a prosthetic arm.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing prosthetic arm.</jobString>
+    <workAmount>2000</workAmount>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SimpleProstheticArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SimpleProstheticArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BWBRShoulder</li>
+      <li>BWBLShoulder</li>
+      <li>BWTRShoulder</li>
+      <li>BWTLShoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SimpleProstheticArm</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallBionicRightPedipalp</defName>
+    <label>install bionic right pedipalp</label>
+    <description>Installs bionic right pedipalp.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing bionic right pedipalp.</jobString>
+    <workAmount>1200</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BionicPedipalp</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BionicPedipalp</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BWBRShoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BionicRightPedipalp</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallBionicLeftPedipalp</defName>
+    <label>install bionic left pedipalp</label>
+    <description>Installs bionic left pedipalp.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing bionic left pedipalp.</jobString>
+    <workAmount>1200</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BionicPedipalp</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BionicPedipalp</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BWBLShoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BionicLeftPedipalp</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallBlackWidowSleipnirArm</defName>
+    <label>install sleipnir class bionic widow arm</label>
+    <description>Installs sleipnir arm.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing sleipnir arm.</jobString>
+    <workAmount>3000</workAmount>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BlackWidowSleipnirArm</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BlackWidowSleipnirArm</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BWTRShoulder</li>
+      <li>BWTLShoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BlackWidowSleipnirArm</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallSimpleProstheticSpiderLeg</defName>
+    <label>install prosthetic spider leg</label>
+    <description>Install a prosthetic spider leg.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing prosthetic spider leg.</jobString>
+    <workAmount>2000</workAmount>
+    <skillRequirements>
+      <Medicine>4</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SimpleProstheticSpiderLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>SimpleProstheticSpiderLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BlackWidowFirstRightLeg</li>
+      <li>BlackWidowSecondRightLeg</li>
+      <li>BlackWidowThirdRightLeg</li>
+      <li>BlackWidowFourthRightLeg</li>
+      <li>BlackWidowFirstLeftLeg</li>
+      <li>BlackWidowSecondLeftLeg</li>
+      <li>BlackWidowThirdLeftLeg</li>
+      <li>BlackWidowFourthLeftLeg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SimpleProstheticSpiderLeg</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallBlackWidowShredderLeg</defName>
+    <label>install black widow shredder leg</label>
+    <description>Install a black widow shredder leg.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing black widow shredder leg.</jobString>
+    <workAmount>3000</workAmount>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BlackWidowShredderLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BlackWidowShredderLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>BlackWidowFirstRightLeg</li>
+      <li>BlackWidowSecondRightLeg</li>
+      <li>BlackWidowThirdRightLeg</li>
+      <li>BlackWidowFourthRightLeg</li>
+      <li>BlackWidowFirstLeftLeg</li>
+      <li>BlackWidowSecondLeftLeg</li>
+      <li>BlackWidowThirdLeftLeg</li>
+      <li>BlackWidowFourthLeftLeg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BlackWidowShredderLeg</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallBlackWidowHeartMind</defName>
+    <label>install black widow heart mind</label>
+    <description>Install a black widow heart mind.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing black widow heart mind.</jobString>
+    <workAmount>3700</workAmount>
+    <deathOnFailedSurgeryChance>0.5</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BlackWidowHeartMind</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BlackWidowHeartMind</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BlackWidowHeartMind</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>InstallBlackWidowIntegratedBroodMind</defName>
+    <label>install black widow integrated brood mind</label>
+    <description>Install a black widow integrated brood mind.</description>
+    <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+    <jobString>Installing black widow integrated brood mind.</jobString>
+    <workAmount>3700</workAmount>
+    <deathOnFailedSurgeryChance>1.0</deathOnFailedSurgeryChance>
+    <skillRequirements>
+      <Medicine>10</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>BlackWidowIntegratedBroodMind</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>BlackWidowIntegratedBroodMind</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brood_Mind</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>BlackWidowIntegratedBroodMind</addsHediff>
+  </RecipeDef>
+</Defs>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+  <identifier>BlackWidows</identifier>
+  <version>1.0.0.0</version>
+  <dependencies />
+  <incompatibleWith />
+  <loadBefore />
+  <loadAfter />
+  <manifestUri>https://raw.githubusercontent.com/emipa606/BlackWidows/master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/emipa606/BlackWidows/releases</downloadUri>
+</Manifest>
+

@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Start of ThingDefs -->
+  <!--  =========== Base Classes ============ -->
+  <!-- Artwork Base Class -->
+  <ThingDef Name="BlackWidow_ArtworkBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building_Art</thingClass>
+    <graphicData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <thingCategories>
+      <li>BuildingsArt</li>
+    </thingCategories>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <castEdgeShadows>true</castEdgeShadows>
+    <useHitPoints>true</useHitPoints>
+    <altitudeLayer>Building</altitudeLayer>
+    <selectable>true</selectable>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <fillPercent>0.5</fillPercent>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Artistic</workSkill>
+      <unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Sculpt</soundWorking>
+      <recipeUsers>
+        <li>TableSculpting</li>
+      </recipeUsers>
+    </recipeMaker>
+    <tradeTags>
+      <li>Furniture</li>
+      <li>Exotic</li>
+    </tradeTags>
+  </ThingDef>
+  <!-- Artwork Sculpture Class -->
+  <ThingDef Name="BlackWidow_ArtworkQuality" ParentName="BlackWidow_ArtworkBase" Abstract="True">
+    <rotatable>false</rotatable>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- Artwork Sculpture Class -->
+  <ThingDef Name="BlackWidow_ArtworkAnyQuality" ParentName="BlackWidow_ArtworkQuality" Abstract="True">
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_Sculpture</nameMaker>
+        <descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+  <!-- Artwork Furniture Class -->
+  <ThingDef Name="BlackWidow_ArtworkHiQuality" ParentName="BlackWidow_ArtworkQuality" Abstract="True">
+    <rotatable>false</rotatable>
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_Furniture</nameMaker>
+        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+  <!--  =========== Actual Artwork Buildings ============ -->
+  <!-- ========= God Shrines ========= -->
+  <!-- Random Number God Shrine -->
+  <ThingDef ParentName="BlackWidow_ArtworkQuality">
+    <defName>SmallWoven</defName>
+    <label>Small Widow's sculpture</label>
+    <description>Small "sculpture" produced from Widow's silk and... other materials.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Art/SmallWoven</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,1)</drawSize>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+    </graphicData>
+    <rotatable>true</rotatable>
+    <uiIconPath>Things/Buildings/Art/SmallWoven_Icon</uiIconPath>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Beauty>65</Beauty>
+      <WorkToMake>18000</WorkToMake>
+      <Flammability>1.5</Flammability>
+      <Mass>3</Mass>
+    </statBases>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>BWFabric</li>
+    </stuffCategories>
+    <costList>
+      <!--<WidowSilk>50</WidowSilk>-->
+      <Meat_Human>10</Meat_Human>
+    </costList>
+    <!--<stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>-->
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <hasInteractionCell>False</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <!-- Shrine to the Creator -->
+  <ThingDef ParentName="BlackWidow_ArtworkQuality">
+    <defName>MediumWoven</defName>
+    <label>Medium woven sculpture</label>
+    <description>Widows like to joke that it doubles as a "snack."</description>
+    <graphicData>
+      <texPath>Things/Buildings/Art/MediumWoven</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+    </graphicData>
+    <uiIconPath>Things/Buildings/Art/MediumWoven_Icon</uiIconPath>
+    <size>(2,2)</size>
+    <rotatable>true</rotatable>
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories>
+      <li>BWFabric</li>
+    </stuffCategories>
+    <costList>
+      <!--<WidowSilk>100</WidowSilk>-->
+      <Meat_Human>25</Meat_Human>
+    </costList>
+    <!--<stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>-->
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Beauty>120</Beauty>
+      <WorkToMake>18000</WorkToMake>
+      <Flammability>1.5</Flammability>
+      <Mass>7</Mass>
+    </statBases>
+    <hasInteractionCell>False</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <!-- Shrine to Pang Li -->
+  <ThingDef ParentName="BlackWidow_ArtworkQuality">
+    <defName>LargeWoven</defName>
+    <label>Large woven sculpture</label>
+    <description>These large, still squirming sculptures serve as a remind to vistors to Widow outposts and homeworlds that Widow justice is swift to arrive, but slow to execute.</description>
+    <graphicData>
+      <texPath>Things/Buildings/Art/LargeWoven</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <drawRotated>false</drawRotated>
+      <allowFlip>false</allowFlip>
+    </graphicData>
+    <uiIconPath>Things/Buildings/Art/LargeWoven_Icon</uiIconPath>
+    <size>(3,3)</size>
+    <rotatable>true</rotatable>
+    <costStuffCount>150</costStuffCount>
+    <stuffCategories>
+      <li>BWFabric</li>
+    </stuffCategories>
+    <costList>
+      <!--<WidowSilk>150</WidowSilk>-->
+      <Meat_Human>50</Meat_Human>
+    </costList>
+    <!--<stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>-->
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Beauty>300</Beauty>
+      <WorkToMake>18000</WorkToMake>
+      <Flammability>1.5</Flammability>
+      <Mass>25</Mass>
+    </statBases>
+    <hasInteractionCell>False</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+  <!-- End of ThingDefs -->
+</Defs>

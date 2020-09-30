@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <RecipeDef>
+    <defName>BW_MakeWineofMemoriesBase</defName>
+    <label>make wine of memories mash</label>
+    <description>Make wine of memories mash from skullflower.</description>
+    <jobString>Making wine of memories mash.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <recipeUsers>
+      <li>Brewery</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawBWCorpseFlowerFlowie</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawBWCorpseFlowerFlowie</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <BW_WineofMemoriesBase>5</BW_WineofMemoriesBase>
+    </products>
+  </RecipeDef>
+</Defs>

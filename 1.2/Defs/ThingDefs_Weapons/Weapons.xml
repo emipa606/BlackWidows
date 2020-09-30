@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <ThingDef Name="BWBaseGun" Abstract="True" ParentName="BaseWeapon">
+    <techLevel>Ultra</techLevel>
+    <smeltable>true</smeltable>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef Name="BWBaseMakeableGun" ParentName="BWBaseGun" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+  <ThingDef Name="BaseBWGun" ParentName="BWBaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <ThingDef Name="BaseBWMakeableGun" ParentName="BWBaseMakeableGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ==================== orassan rocket launcher ========================== -->
+  <!-- ==================== orassan shotgun ========================== -->
+  <!-- ==================== orassan rifle ========================== -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_BWRifle</defName>
+    <label>charge shot</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Weapons/BW_Bullet_Rifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <speed>120</speed>
+      <stoppingPower>3.0</stoppingPower>
+    </projectile>
+  </ThingDef>
+  <!--<ThingDef ParentName="BaseOrassanMakeableGun">
+    <defName>Gun_OrassanRifle</defName>
+    <label>orassan rifle</label>
+    <description>Charged-shot energy/projectile rifle. Orassan design.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Weapons/kittyrifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <WorkToMake>45000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>OChargedShot</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+	  <Uranium>5</Uranium>
+      <Steel>100</Steel>
+      <Plasteel>100</Plasteel>
+      <ComponentSpacer>1</ComponentSpacer>
+	  <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <techLevel>Ultra</techLevel>
+    <weaponTags>
+      <li>OrassanRifle</li>
+    </weaponTags>
+	<tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_OrassanRifle</defaultProjectile>
+        <warmupTime>.9</warmupTime>
+        <range>36</range>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <burstShotCount>4</burstShotCount>
+        <soundCast>ORifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef> -->
+  <!-- ==================== orassan sniper ========================== -->
+  <!-- ==================== orassan pistols ========================== -->
+  <!-- ==================== orassan SMG ========================== -->
+  <!-- ==================== orassan LMG ========================== -->
+  <ThingDef ParentName="BaseBWMakeableGun">
+    <defName>Gun_BWRifle</defName>
+    <label>black widow rifle</label>
+    <description>Charged-shot rifle with low-medium range and decent firing power. Though Widows are not known for their ranged capacity, this rifle still represents a pinacle of their weapons technology.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Weapons/BWRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <WorkToMake>35000</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>.3</AccuracyLong>
+      <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>ChargedShot</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>12</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <costList>
+      <Uranium>10</Uranium>
+      <Steel>100</Steel>
+      <WidowSilk>75</WidowSilk>
+      <Plasteel>150</Plasteel>
+      <ComponentSpacer>3</ComponentSpacer>
+      <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
+    <techLevel>Ultra</techLevel>
+    <weaponTags>
+      <li>BWRifle</li>
+      <li>BlackWidowRanged</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.0</cooldownTime>
+      </li>
+    </tools>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_BWRifle</defaultProjectile>
+        <warmupTime>1.3</warmupTime>
+        <range>50</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBWMakeableGun">
+    <defName>Bow_BWBow</defName>
+    <label>black widow bow</label>
+    <description>Black Widow bows work well at medium range, and do tremendous damage, but the tension required to launch their psionically laden arrows makes reloading a chore. The blades worked into their limbs make them solid melee weapons, however, meaning it is often best to use them to do additional damage while closing in for a close combat kill.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Weapons/BWBow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.65</drawSize>
+    </graphicData>
+    <soundInteract>Bow_Recurve</soundInteract>
+    <statBases>
+      <WorkToMake>5500</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>.3</AccuracyLong>
+      <RangedWeapon_Cooldown>.5</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <WidowSilk>125</WidowSilk>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>BWBow</li>
+      <li>BlackWidowRanged</li>
+    </weaponTags>
+    <tools>
+      <li>
+        <label>hand guard</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>21</power>
+        <cooldownTime>3.0</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <eastOffset>(0.31,0,0)</eastOffset>
+        <westOffset>(-0.31,0,0)</westOffset>
+      </li>
+    </comps>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_BWBolt</defaultProjectile>
+        <warmupTime>8.5</warmupTime>
+        <range>25.0</range>
+        <soundCast>Bow_Large</soundCast>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Arrow_BWBolt</defName>
+    <label>black widow bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Arrow</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <stoppingPower>2.5</stoppingPower>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+      <speed>49</speed>
+    </projectile>
+  </ThingDef>
+  <!-- ==================== cryogenic launcher ========================== -->
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>MeleeWeapon_bwscythe</defName>
+    <label>black widow scythe</label>
+    <description>A scythe imbued with widow fibers, and a common melee weapon for Widow front liners. A surprisingly fast weapon with solid reach and a capacity to help widows evade attacks.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Weapons/BWScythe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>2.0</drawSize>
+    </graphicData>
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>NonNeolithicOnlyMelee</li>
+      <li>BlackWidowMelee</li>
+    </weaponTags>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costStuffCount>125</costStuffCount>
+    <costList>
+      <WidowSilk>75</WidowSilk>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>1.6</Mass>
+    </statBases>
+    <equippedStatOffsets>
+      <MeleeDodgeChance>0.15</MeleeDodgeChance>
+    </equippedStatOffsets>
+    <equippedAngleOffset>-75</equippedAngleOffset>
+    <tools>
+      <li>
+        <label>hand guard</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>hook</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>27</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>28</power>
+        <cooldownTime>2.5</cooldownTime>
+      </li>
+    </tools>
+    <comps>
+      <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+        <eastOffset>(0.31,0,0)</eastOffset>
+        <westOffset>(-0.31,0,0)</westOffset>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Implants -->
+  <ThingDef ParentName="BodyPartBase" Name="BlackWidowBodyPartNaturalBase" Abstract="True">
+    <thingCategories>
+      <li>BodyPartsNatural</li>
+    </thingCategories>
+    <statBases>
+      <DeteriorationRate>4.0</DeteriorationRate>
+    </statBases>
+  </ThingDef>
+  <!-- <HediffDef Name="LTF_HybridPartsBase" Abstract="True" ParentName="AddedBodyPartBase"> -->
+  <HediffDef Name="BlackWidow_HybridPartsBase" Abstract="True" ParentName="AddedBodyPartBase">
+    <hediffClass>Hediff_AddedPart</hediffClass>
+    <defaultLabelColor>(232, 157, 27)</defaultLabelColor>
+    <isBad>false</isBad>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  <ThingDef Name="BlackWidowBodyPartBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Beauty>-6</Beauty>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Never</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <tradeTags>
+      <li>BodyPartOrImplant</li>
+    </tradeTags>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <pathCost>10</pathCost>
+  </ThingDef>
+  <!-- Black Widow Body Parts -->
+  <ThingDef ParentName="BlackWidowBodyPartNaturalBase">
+    <defName>BW_Item_BWLeg</defName>
+    <label>black widow arachnine leg</label>
+    <description>The arachnid leg of a Black Widow.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>200</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BlackWidowBodyPartNaturalBase">
+    <defName>BW_Item_TRightArm</defName>
+    <label>black widow top right arm</label>
+    <description>The top right arm and shoulder of a black widow.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>350</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BlackWidowBodyPartNaturalBase">
+    <defName>BW_Item_BRightArm</defName>
+    <label>black widow bottom right arm</label>
+    <description>The bottom right arm and shoulder of a black widow.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>350</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BlackWidowBodyPartNaturalBase">
+    <defName>BW_Item_TLeftArm</defName>
+    <label>black widow top left arm</label>
+    <description>The top left arm and shoulder of a black widow.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>350</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BlackWidowBodyPartNaturalBase">
+    <defName>BW_Item_BLeftArm</defName>
+    <label>black widow bottom left arm</label>
+    <description>The bottom left arm and shoulder of a black widow.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>350</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BlackWidowBodyPartNaturalBase">
+    <defName>BW_Item_Leg</defName>
+    <label>black widow spider leg</label>
+    <description>One of the massive, spiderlike legs of a black widow.</description>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItemNatural</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>350</MarketValue>
+      <Mass>1</Mass>
+    </statBases>
+  </ThingDef>
+  <!-- LTF_Ovipositor -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WombMind</defName>
+    <label>Brood Mind</label>
+    <description>The brood mind of a Gray Mother. It holds a separate sapience to that of the Mother herself. In exchange for using her body as life-support, the brood mind networks with her consciousness, granting her greater psionic power and cognitive strength.</description>
+    <stages>
+      <li>
+        <!--<painOffset>0.1</painOffset>-->
+        <painFactor>1.1</painFactor>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.15</offset>
+          </li>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>2.0</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>WombMind</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.92</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>CoreMind</defName>
+    <label>core mind</label>
+    <description>The brood core cerebrum of a Gray Mother, equivalent to the brains of other sentients, though atrophied due to the existence of the brood mind.</description>
+    <stages>
+      <li>
+        <!--<painOffset>0.1</painOffset>-->
+        <painFactor>1.1</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-1.75</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>CoreMind</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.0</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+</Defs>

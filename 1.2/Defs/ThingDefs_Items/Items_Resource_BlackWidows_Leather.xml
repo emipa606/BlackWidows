@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_BlackWidow</defName>
+    <label>black widow chitin</label>
+    <description>A combination of leather and chitin gathered from a black widow. It's fairly tough, but it makes the skin crawl when worn, like the worked flesh is still alive and trying to worm its way into your mind.</description>
+    <graphicData>
+      <color>(220,235,220)</color>
+      <colorTwo>(235,235,235)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MarketValue>4</MarketValue>
+      <StuffPower_Armor_Sharp>0.3</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Cold>15</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>15</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(220,235,220)</color>
+      <commonality>0.001</commonality>
+    </stuffProps>
+  </ThingDef>
+</Defs>

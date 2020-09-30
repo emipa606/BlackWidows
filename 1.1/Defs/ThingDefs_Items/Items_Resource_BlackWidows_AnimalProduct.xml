@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--=====================================================================-->
+  <!--=============================== Misc ================================-->
+  <!--=====================================================================-->
+  <!--=====================================================================-->
+  <!--=============================== Eggs ================================-->
+  <!--=====================================================================-->
+  <ThingDef Abstract="True" Name="EggBWFertBase" ParentName="EggBase">
+    <tickerType>Normal</tickerType>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+    <thingCategories>
+      <li>EggsFertilized</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_TemperatureRuinable">
+        <minSafeTemperature>5</minSafeTemperature>
+        <maxSafeTemperature>75</maxSafeTemperature>
+        <progressPerDegreePerTick>0.00003</progressPerDegreePerTick>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- Chicken -->
+  <!--<ThingDef ParentName="EggUnfertBase">
+    <defName>EggBWShadowWormUnfertilized</defName>
+    <label>shadow portal (unfert.)</label>
+    <description>An unfertilized chicken egg. It can be eaten raw, but it's much, much better cooked.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+  </ThingDef>-->
+  <ThingDef ParentName="EggBWFertBase">
+    <defName>EggBWShadowWormFertilized</defName>
+    <label>shadow rupture</label>
+    <description>A shadow rupture is a rift in space and time created by the psionic cries of anguish emanating from an enthroned widow. Innevitably, the creatures from the shadowy realm at the other end of the portal will find their way through... what could be escaping from this portal, in particular?</description>
+    <graphicData>
+      <texPath>Things/Item/BWShadowRupture</texPath>
+      <!--<color>(245,245,245)</color>-->
+    </graphicData>
+    <statBases>
+      <MarketValue>15.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>7.0</hatcherDaystoHatch>
+        <hatcherPawn>BWShadowWorm</hatcherPawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>14</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- Moth -->
+  <ThingDef ParentName="EggBWFertBase">
+    <defName>EggBWFlooferMothFertilized</defName>
+    <label>shadow rupture</label>
+    <description>A shadow rupture is a rift in space and time created by the psionic cries of anguish emanating from an enthroned widow. Innevitably, the creatures from the shadowy realm at the other end of the portal will find their way through... what could be escaping from this portal, in particular?</description>
+    <graphicData>
+      <texPath>Things/Item/BWShadowRupture</texPath>
+      <!--<color>(245,245,245)</color>-->
+    </graphicData>
+    <statBases>
+      <MarketValue>15.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>7.0</hatcherDaystoHatch>
+        <hatcherPawn>BWFlooferMoth</hatcherPawn>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>14</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>
