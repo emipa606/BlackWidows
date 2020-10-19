@@ -8,7 +8,7 @@
     <altitudeLayer>Pawn</altitudeLayer>
     <useHitPoints>false</useHitPoints>
     <hasTooltip>true</hasTooltip>
-    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
     <inspectorTabs>
       <li>ITab_Pawn_Health</li>
       <li>ITab_Pawn_Needs</li>
@@ -307,7 +307,7 @@
       </hairSettings>
       <thoughtSettings>
         <cannotReceiveThoughts>
-          <li>CabinFever</li>
+          <li>NeedOutdoors</li>
           <li>Naked</li>
           <li>HumanLeatherApparelSad</li>
         </cannotReceiveThoughts>
@@ -324,8 +324,8 @@
             <raceList>
               <li>Races_BlackWidow</li>
             </raceList>
-            <thought>ButcheredHuman</thought>
-            <knowThought>KnowButcheredHuman</knowThought>
+            <thought>ButcheredHumanlikeCorpse</thought>
+            <knowThought>KnowButcheredHumanlikeCorpse</knowThought>
           </li>
         </butcherThoughtSpecific>
         <!-- <ateThoughtSpecific>
@@ -340,20 +340,20 @@
         <ateThoughtSpecific>
           <li>
             <raceList>
-              <li>Races_Animal_Base</li>
-              <li>Races_Animal_Arid</li>
-              <li>Races_Animal_Bears</li>
-              <li>Races_Animal_BigCats</li>
-              <li>Races_Animal_Birds</li>
-              <li>Races_Animal_Farm</li>
-              <li>Races_Animal_Giant</li>
-              <li>Races_Animal_Hares</li>
-              <li>Races_Animal_Insect</li>
-              <li>Races_Animal_Pet</li>
-              <li>Races_Animal_Rodentlike</li>
-              <li>Races_Animal_Temperate</li>
-              <li>Races_Animal_Tropical</li>
-              <li>Races_Animal_WildCanines</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Base</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Arid</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Bears</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_BigCats</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Birds</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Farm</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Giant</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Hares</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Insect</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Pet</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Rodentlike</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Temperate</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Tropical</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_WildCanines</li>
             </raceList>
             <thought>AteRegularMeatAsIngredientWidow</thought>
             <ingredientThought>WidowAteRegularIngredientDirect</ingredientThought>
@@ -379,7 +379,6 @@
         </apparelList>
         <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
         <whiteApparelList>
-          <li>BeltDefensePop</li>
           <li>Apparel_CowboyHat</li>
           <li>Apparel_BowlerHat</li>
           <li>Apparel_TribalHeaddress</li>
@@ -390,142 +389,142 @@
           <li>Apparel_AdvancedHelmet</li>
           <li>Apparel_PowerArmorHelmet</li>
           <li>Apparel_PsychicFoilHelmet</li>
-          <li>Apparel_TacHelmet</li>
-          <li>Apparel_ProtectiveHelmet</li>
-          <li>Apparel_HuskerHood</li>
-          <li>Apparel_SkulkerHood</li>
-          <li>Apparel_ThumperHood</li>
-          <li>Apparel_GrinderHelmet</li>
-          <li>Apparel_ScorcherHelmet</li>
-          <li>Apparel_LaconianH</li>
-          <li>Apparel_DropsuitH</li>
-          <li>Apparel_NervesuitH</li>
-          <li>Apparel_BjornH</li>
-          <li>Apparel_FSArmorH</li>
-          <li>Apparel_NemesisH</li>
-          <li>Apparel_HazardCarapaceH</li>
-          <li>Apparel_CloseCombatHelmet</li>
-          <li>LotRE_ElfApparel_BattleHelmetSea</li>
-          <li>LotRE_ElfApparel_BattleHelmetWood</li>
-          <li>LotRE_ElfApparel_BattleHelmetTree</li>
-          <li>LotRE_ElfApparel_BattleHelmet</li>
-          <li>LotRE_ElfApparel_WoodElfCrown</li>
-          <li>Apparel_LeviathanH</li>
-          <li>Apparel_ACPCarapaceHelmet</li>
-          <li>Apparel_FSFurHat</li>
-          <li>Apparel_FSDesertWrap</li>
-          <li>Apparel_FSChefsHat</li>
-          <li>Apparel_FSSurgicalMask</li>
-          <li>Apparel_FSGasmask</li>
-          <li>Apparel_JudicatorH</li>
-          <li>Apparel_MarksmanGearH</li>
-          <li>Apparel_UGHelmet</li>
-          <li>Apparello_Goggles</li>
-          <li>Apparello_Visoor</li>
-          <li>Apparello_Shadess</li>
-          <li>Apparello_Piloggle</li>
-          <li>Apparello_Brimsk</li>
-          <li>Apparello_Doom</li>
-          <li>Apparello_Quotee</li>
-          <li>Apparel_Psymask</li>
-          <li>Apparello_Zorro</li>
-          <li>Apparello_Footy</li>
-          <li>Apparello_Meffect</li>
-          <li>Apparello_Meffectwo</li>
-          <li>Apparello_Kurt</li>
-          <li>Apparello_Kurtlite</li>
-          <li>Apparello_Rockman</li>
-          <li>Apparello_Raideroos</li>
-          <li>Apparello_Yi</li>
-          <li>Apparello_Raz</li>
-          <li>Apparello_Mojo</li>
-          <li>Apparello_Mojotwo</li>
-          <li>Apparello_MojoFeather</li>
-          <li>Apparello_Wendywelder</li>
-          <li>Apparello_Hardhat</li>
-          <li>Apparello_Chefhat</li>
-          <li>Apparello_Chefhatplus</li>
-          <li>Apparello_Cyninja</li>
-          <li>Apparello_Medihelmet</li>
-          <li>Apparello_Proto</li>
-          <li>Apparello_ProtoFin</li>
-          <li>Apparello_Commissar</li>
-          <li>Apparello_Gassy</li>
-          <li>Apparello_Cybissar</li>
-          <li>Apparello_Medband</li>
-          <li>Apparello_Docteur</li>
-          <li>Apparello_Plainhat</li>
-          <li>Apparello_Furhat</li>
-          <li>Apparello_Bandit</li>
-          <li>Apparello_Cardshark</li>
-          <li>Apparello_Sandtrader</li>
-          <li>Apparello_Tradecone</li>
-          <li>Apparello_Fedora</li>
-          <li>Apparello_Headset</li>
-          <li>Apparello_Beret</li>
-          <li>Apparello_Tophat</li>
-          <li>Apparello_Bandal</li>
-          <li>Apparello_Vandal</li>
-          <li>Apparello_Lecap</li>
-          <li>Apparello_Hoood</li>
-          <li>Apparello_Sombrero</li>
-          <li>Apparello_Moron</li>
-          <li>ROM_Apparel_ROM_SlickerHat</li>
-          <li>ROM_Apparel_ROM_StrawHat</li>
-          <li>ROM_Apparel1920sPoliceHat</li>
-          <li>ROM_ApparelWWIHelmet</li>
-          <li>ROM_Apparel_NurseCap</li>
-          <li>ROM_Apparel_CallOfCthulhuTopHat</li>
-          <li>ROM_Apparel_CallOfCthulhuNewsboyCap</li>
-          <li>ROM_Apparel_CallOfCthulhuFedora</li>
-          <li>ROM_Apparel_CallOfCthulhuBowler</li>
-          <li>ROM_Apparel_MERF_LightHelmet</li>
-          <li>ROM_Apparel_MERF_HeavyHelmet</li>
-          <li>Apparel_BastMask</li>
-          <li>Apparel_CultistHood</li>
-          <li>Apparel_HasturHood</li>
-          <li>Apparel_CthulhuMaskHood</li>
-          <li>Apparel_NyarlathotepHood</li>
-          <li>Apparel_DagonMitre</li>
-          <li>Apparel_ShubMask</li>
-          <li>Apparel_StandardHood</li>
-          <li>Apparel_SailorsCap</li>
-          <li>Apparel_NanoSuitHelmet</li>
-          <li>Apparel_OCHelmet</li>
-          <li>MedTimes_Headgear_ArmingCap</li>
-          <li>MedTimes_Headgear_WinterHat</li>
-          <li>MedTimes_Helm_Wooden</li>
-          <li>MedTimes_Helm_Headwrap</li>
-          <li>MedTimes_Helm_Domed</li>
-          <li>MedTimes_Helm_Sallet</li>
-          <li>MedTimes_Helm_Nasal</li>
-          <li>MedTimes_Helm_FullPlated</li>
-          <li>MedTimes_Helm_Warbourne</li>
-          <li>MedTimes_Helm_Bascinet</li>
-          <li>MedTimes_Helm_ConicalBascinet</li>
-          <li>MedTimes_Helm_RoyalMask</li>
-          <li>MedTimes_Helm_DeathMask</li>
-          <li>MedTimes_Helm_Wooden_Nan</li>
-          <li>MedTimes_Helm_Headwrap_Nan</li>
-          <li>MedTimes_Helm_Domed_Nan</li>
-          <li>MedTimes_Helm_Sallet_Nan</li>
-          <li>MedTimes_Helm_Nasal_Nan</li>
-          <li>MedTimes_Helm_FullPlated_Nan</li>
-          <li>MedTimes_Helm_Warbourne_Nan</li>
-          <li>MedTimes_Helm_Bascinet_Nan</li>
-          <li>MedTimes_Helm_ConicalBascinet_Nan</li>
-          <li>MedTimes_Helm_RoyalMask_Nan</li>
-          <li>MedTimes_Helm_DeathMask_Nan</li>
-          <li>MedTimes_Helm_GodKingBlue_Art</li>
-          <li>MedTimes_Helm_GodKingGreen_Art</li>
-          <li>MedTimes_Helm_Warlord_Art</li>
-          <li>MedTimes_Helm_Torvald_Art</li>
-          <li>MedTimes_Helm_Combat_Art</li>
-          <li>MedTimes_Helm_GodKingBlue_Leg</li>
-          <li>MedTimes_Helm_GodKingGreen_Leg</li>
-          <li>MedTimes_Helm_Warlord_Leg</li>
-          <li>MedTimes_Helm_Torvald_Leg</li>
-          <li>MedTimes_Helm_Combat_Leg</li>
+          <li MayRequire="rimsenal.EVP">Apparel_TacHelmet</li>
+          <li MayRequire="rimsenal.EVP">Apparel_ProtectiveHelmet</li>
+          <!-- <li>Apparel_HuskerHood</li> -->
+          <!-- <li>Apparel_SkulkerHood</li> -->
+          <!-- <li>Apparel_ThumperHood</li> -->
+          <!-- <li>Apparel_GrinderHelmet</li> -->
+          <!-- <li>Apparel_ScorcherHelmet</li> -->
+          <!-- <li>Apparel_LaconianH</li> -->
+          <li MayRequire="rimsenal.core">Apparel_DropsuitH</li>
+          <!-- <li>Apparel_NervesuitH</li> -->
+          <!-- <li>Apparel_BjornH</li> -->
+          <li MayRequire="rimsenal.core">Apparel_FSArmorH</li>
+          <!-- <li>Apparel_NemesisH</li> -->
+          <li MayRequire="rimsenal.core">Apparel_HazardCarapaceH</li>
+          <li MayRequire="rimsenal.core">Apparel_CloseCombatHelmet</li>
+          <li MayRequire="Mlie.LordoftheRimsElves">LotRE_ElfApparel_BattleHelmetSea</li>
+          <li MayRequire="Mlie.LordoftheRimsElves">LotRE_ElfApparel_BattleHelmetWood</li>
+          <li MayRequire="Mlie.LordoftheRimsElves">LotRE_ElfApparel_BattleHelmetTree</li>
+          <li MayRequire="Mlie.LordoftheRimsElves">LotRE_ElfApparel_BattleHelmet</li>
+          <li MayRequire="Mlie.LordoftheRimsElves">LotRE_ElfApparel_WoodElfCrown</li>
+          <!-- <li>Apparel_LeviathanH</li> -->
+          <!-- <li>Apparel_ACPCarapaceHelmet</li> -->
+          <li MayRequire="spoonshortage.fashionrimsta">Apparel_FSFurHat</li>
+          <li MayRequire="spoonshortage.fashionrimsta">Apparel_FSDesertWrap</li>
+          <li MayRequire="spoonshortage.fashionrimsta">Apparel_FSChefsHat</li>
+          <li MayRequire="spoonshortage.fashionrimsta">Apparel_FSSurgicalMask</li>
+          <li MayRequire="spoonshortage.fashionrimsta">Apparel_FSGasmask</li>
+          <!-- <li>Apparel_JudicatorH</li> -->
+          <!-- <li>Apparel_MarksmanGearH</li> -->
+          <!-- <li>Apparel_UGHelmet</li> -->
+          <li MayRequire="Shinzy.Apparello">Apparello_Goggles</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Visoor</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Shadess</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Piloggle</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Brimsk</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Doom</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Quotee</li>
+          <li MayRequire="Shinzy.Apparello">Apparel_Psymask</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Zorro</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Footy</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Meffect</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Meffectwo</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Kurt</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Kurtlite</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Rockman</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Raideroos</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Yi</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Raz</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Mojo</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Mojotwo</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_MojoFeather</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Wendywelder</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Hardhat</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Chefhat</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Chefhatplus</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Cyninja</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Medihelmet</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Proto</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_ProtoFin</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Commissar</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Gassy</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Cybissar</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Medband</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Docteur</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Plainhat</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Furhat</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Bandit</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Cardshark</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Sandtrader</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Tradecone</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Fedora</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Headset</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Beret</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Tophat</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Bandal</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Vandal</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Lecap</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Hoood</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Sombrero</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Moron</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_ROM_SlickerHat</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_ROM_StrawHat</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel1920sPoliceHat</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_ApparelWWIHelmet</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_NurseCap</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_CallOfCthulhuTopHat</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_CallOfCthulhuNewsboyCap</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_CallOfCthulhuFedora</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_CallOfCthulhuBowler</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_MERF_LightHelmet</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_MERF_HeavyHelmet</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_BastMask</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_CultistHood</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_HasturHood</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_CthulhuMaskHood</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_NyarlathotepHood</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_DagonMitre</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_ShubMask</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_StandardHood</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_SailorsCap</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_NanoSuitHelmet</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_OCHelmet</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Headgear_ArmingCap</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Headgear_WinterHat</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Wooden</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Headwrap</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Domed</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Sallet</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Nasal</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_FullPlated</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Warbourne</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Bascinet</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_ConicalBascinet</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_RoyalMask</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_DeathMask</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Wooden_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Headwrap_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Domed_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Sallet_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Nasal_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_FullPlated_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Warbourne_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Bascinet_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_ConicalBascinet_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_RoyalMask_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_DeathMask_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_GodKingBlue_Art</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_GodKingGreen_Art</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Warlord_Art</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Torvald_Art</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Combat_Art</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_GodKingBlue_Leg</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_GodKingGreen_Leg</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Warlord_Leg</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Torvald_Leg</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Combat_Leg</li>
         </whiteApparelList>
       </raceRestriction>
     </alienRace>
