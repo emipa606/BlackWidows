@@ -46,21 +46,28 @@
     <li>erdelf.HumanoidAlienRaces</li>
     <li>jecrell.jecstools</li>
     <li>syrchalis.universalfermenter</li>
+    <li>syrchalis.traitvalue</li>
   </loadAfter>
-  <description>Update of Zamnaths mod
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of Zamnaths mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1365540920
 
-[img]https://i.imgur.com/GYswkZ7.png[/img]
+- Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2451324814][SYR] Trait Value[/url]
 
-Support-chat:
-https://invite.gg/mlie
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
 
-Non-steam version:
-https://github.com/emipa606/BlackWidows
+[table]
+	[tr]
+		[td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+		[td][url=https://github.com/emipa606/BlackWidows][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+	[/tr]
+[/table]
 	
---- Original Description ---
+[img]https://i.imgur.com/NOW7jU1.png[/img]
+
 Description:
-Introducing the Black Widows, a new unique playable race for Rimworld! A unisex race of half-arachnids with a culture that relies on raiding for race survival, the Black Widows sport a number of defining features:
+[Now updated for Rimworld 1.1!]
+Introducing the Black Widows, a new unique playable race for Rimworld! A unisex race of half-arachnids with a culture that relies on raiding for race survival, the Black Widows sport a number of defining features: 
 * Unique bodies and heads complete with custom armors.
 * Aggressive faction tendencies and close combat focus.
 * Produce their own silk that can be used to either make Black Widow apparel and items or to make beautiful (but unusually flammable) versions of traditional fabric based items.
@@ -89,10 +96,10 @@ Special Thanks:
 *gouda quiche, ChJees, and others over at the Rimworld Alien Races discord for answering my many, many questions regarding the alien races framework specifically and xml structure in general.
 * Jamaican Castle for developing the framework that allows Widow floors to slow down non-Widow pawns.
 * Swept, patron of the Koopy Combo for creating the new (and awesome) preview image.
-* Kubouch for constructing the code allowing for creation of fermentable items (such as memory wine) and Syrchalis for updating it to 1.0.
+* Kubouch for constructing the code allowing for creation of fermentable items (such as memory wine) and Syrchalis for updating it to 1.0. 
 
-Patches and Other Related Mods:
-LDv's Graphic Overhaul: https://steamcommunity.com/sharedfiles/filedetails/?id=1908487028
+Patches and Other Related Mods: 
+LDv's Graphic Overhaul: https://steamcommunity.com/sharedfiles/filedetails/?id=1908487028andtscn=1573371043
 
 Known Incompatibilities:
 * Orassans Milk Patch: Some of the verbs used to describe milking activities (Orassans) and silk gathering activities (Widows) will overwrite each other. The actual materials produced and the stats for production will remain the same, though.
@@ -102,8 +109,21 @@ Known Incompatibilities:
 
 Known Bugs:
 * Some hair mods with particularly thin hairstyles won't look quite right on Widow heads due to the race's scaling. Most hair mods work fine, though.
-* The game occasionally generates male Widows, and I unfortunately can't completely stop it from doing so (especially in large raids). I think I've resolved the major errors accompanying its generation, though.
+* The game occasionally generates male Widows, and I unfortunately can't completely stop it from doing so (especially in large raids). I think I've resolved the major errors accompanying its generation, though. 
 * Pathing in bases that make heavy use of widow floors can get a bit wonkie, especially for non-widow colonists. It's generally best to use widow floors for widow-specific areas and external defenses. If you find you're having trouble, using Kiame Vivacity's "Path Avoid - 1.0" mod can help significantly.
 * If you are using Show Hair With Hats, having the Widows mod after the show hair with hats mod causes bobbleheading. Placing the Widows mod before that mod generally fixes the issue.
-* Sick widows sometimes refuse to gather silk from themselves. This can trigger on chronic issues like asthma, too. Fixing the health condition should allow them to gather silk again.</description>
+* Sick widows sometimes refuse to gather silk from themselves. This can trigger on chronic issues like asthma, too. Fixing the health condition should allow them to gather silk again.
+
+
+[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]
+</description>
 </ModMetaData>
+
