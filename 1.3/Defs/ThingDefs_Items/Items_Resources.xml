@@ -1,0 +1,519 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>WidowSilk</defName>
+    <label>Widow Silk</label>
+    <description>Fabric spun from a Black Widow's spinnerettes. This beautiful, light weight, strong cloth is imbued with latent psionic energies. Only the Widows know how to make full use of this material</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Wool</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(190,160,119)</color>
+    </graphicData>
+    <statBases>
+      <Beauty>4</Beauty>
+      <MaxHitPoints>150</MaxHitPoints>
+      <MarketValue>2.5</MarketValue>
+      <Mass>0.025</Mass>
+      <Flammability>2.0</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <StuffPower_Armor_Sharp>1.40</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.30</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>3.00</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>30</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.9</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <categories>
+        <li>Fabric</li>
+        <li>BWFabric</li>
+      </categories>
+      <commonality>0.10</commonality>
+      <color>(180,148,109)</color>
+      <!--<statOffsets>
+        <ArmorRating_Blunt>0.035</ArmorRating_Blunt>
+        <ArmorRating_Sharp>0.035</ArmorRating_Sharp>
+        <ArmorRating_Heat>0</ArmorRating_Heat>
+      </statOffsets>-->
+      <statFactors>
+        <WorkToMake>2.0</WorkToMake>
+        <!--<ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+        <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+        <ArmorRating_Heat>0.0</ArmorRating_Heat>-->
+      </statFactors>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+      <li>BWTextiles</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="WoolBase">
+    <defName>ThroneSilk</defName>
+    <label>Black Widow Throne Silk</label>
+    <description>Produced from an enthroned widow, Throne Silk is more powerful and beautiful than typical widowsilk. That said, it can be combined with widowsilk at a crafting bench to create Abyss Silk, which is more powerful than both.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Wool</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>RGBA(0.450,0.071,0.145,1)</color>
+    </graphicData>
+    <statBases>
+      <Beauty>6</Beauty>
+      <MaxHitPoints>180</MaxHitPoints>
+      <MarketValue>3.0</MarketValue>
+      <Mass>0.025</Mass>
+      <Flammability>2.0</Flammability>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <StuffPower_Armor_Sharp>1.5</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.4</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>3.00</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>29</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.9</BluntDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <categories>
+        <li>Fabric</li>
+        <li>BWFabric</li>
+      </categories>
+      <commonality>0.10</commonality>
+      <color>RGBA(0.450,0.071,0.145,1)</color>
+      <!--<statOffsets>
+        <ArmorRating_Blunt>0.035</ArmorRating_Blunt>
+        <ArmorRating_Sharp>0.035</ArmorRating_Sharp>
+        <ArmorRating_Heat>0</ArmorRating_Heat>
+      </statOffsets>-->
+      <statFactors>
+        <WorkToMake>2.0</WorkToMake>
+        <!--<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+        <ArmorRating_Sharp>1.45</ArmorRating_Sharp>
+        <ArmorRating_Heat>3.0</ArmorRating_Heat>-->
+      </statFactors>
+    </stuffProps>
+    <thingCategories>
+      <!--<li>Textiles</li>-->
+      <li>BWTextiles</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+      <li Class="CompProperties_Glower">
+        <!--<overlightRadius>2.5</overlightRadius>-->
+        <glowRadius>3</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>AbyssSilk</defName>
+    <label>black widow abyss silk</label>
+    <description>Made by interweaving tomb-throne silk and widowsilk, Abyss silk is an insanely potent material easily equivalent to the strongest textiles in existence. Entire empires have fallen in pursuit of this material and the moral ambiguities involved in its construction.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Hyperweave</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(45,15,50)</color>
+    </graphicData>
+    <statBases>
+      <Beauty>10</Beauty>
+      <MaxHitPoints>250</MaxHitPoints>
+      <MarketValue>9</MarketValue>
+      <Mass>0.038</Mass>
+      <Flammability>0.8</Flammability>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <StuffPower_Armor_Sharp>2.05</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>2.98</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>16</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>36</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>1.1</SharpDamageMultiplier>
+      <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <categories>
+        <li>Fabric</li>
+        <li>BWFabric</li>
+      </categories>
+      <commonality>0.10</commonality>
+      <color>(45,15,50)</color>
+      <!--<statOffsets>
+        <ArmorRating_Blunt>0.035</ArmorRating_Blunt>
+        <ArmorRating_Sharp>0.035</ArmorRating_Sharp>
+        <ArmorRating_Heat>0</ArmorRating_Heat>
+      </statOffsets>-->
+      <statFactors>
+        <WorkToMake>2.0</WorkToMake>
+        <!--<ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+        <ArmorRating_Sharp>2.98</ArmorRating_Sharp>
+        <ArmorRating_Heat>2.98</ArmorRating_Heat>-->
+        <Flammability>0.6</Flammability>
+        <MaxHitPoints>2.6</MaxHitPoints>
+      </statFactors>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+      <li>BWTextiles</li>
+    </thingCategories>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+      <li Class="CompProperties_Glower">
+        <!--<overlightRadius>2.5</overlightRadius>-->
+        <glowRadius>3</glowRadius>
+        <glowColor>(40,10,40,5)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawBWGravesparkFruit</defName>
+    <label>gravespark fruit</label>
+    <description>Raw gravespark fruit.</description>
+    <graphicData>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>Things/Item/Usable/BWGravesparkFruit</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+    </statBases>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought />
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawBWCorpseFlowerFlowie</defName>
+    <label>corpse flower petals</label>
+    <description>Raw corpse flower petals. Make for a spicy, aeromatic food base or fermentable into light narcotic wine.</description>
+    <graphicData>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>Things/Item/BWCorpseFlowerFlowie</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.5</MarketValue>
+    </statBases>
+    <ingestible>
+      <tasteThought />
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>BW_WineofMemoriesBase</defName>
+    <label>wine of memories mash</label>
+    <description>Skull flower mash before fermentation. This substance needs to ferment in a fermenting barrel before it becomes drinkable as a Wine of Memories.</description>
+    <graphicData>
+      <texPath>Things/Item/BWMemoryMash</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <statBases>
+      <DeteriorationRate>1.0</DeteriorationRate>
+      <MarketValue>2.5</MarketValue>
+      <Mass>0.8</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>5</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+  <RecipeDef>
+    <defName>Make_wineofmemoriesmash</defName>
+    <label>make wine of memories mash</label>
+    <description>Make wine of memories mash from corpse flower petals.</description>
+    <jobString>Making wine of memories mash.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <recipeUsers>
+      <li>Brewery</li>
+    </recipeUsers>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1000</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawBWCorpseFlowerFlowie</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawBWCorpseFlowerFlowie</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <BW_WineofMemoriesBase>5</BW_WineofMemoriesBase>
+    </products>
+  </RecipeDef>
+  <ThingDef ParentName="DrugBase">
+    <defName>BW_WineofMemories</defName>
+    <label>wine of memories</label>
+    <description>A light narcotic wine laden with the harvested psionic energies of a deceased sentient. It has a cool, spicy flavor, like cinammon mixed with lavender, and smells of night lilies.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/BWWineofMemories</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <equippedAngleOffset>-150</equippedAngleOffset>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <DeteriorationRate>0.6</DeteriorationRate>
+      <MarketValue>16</MarketValue>
+      <Mass>0.3</Mass>
+      <Nutrition>0.09</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>Fluid, Processed, Liquor</foodType>
+      <joy>0.18</joy>
+      <joyKind>Chemical</joyKind>
+      <nurseable>true</nurseable>
+      <drugCategory>Social</drugCategory>
+      <ingestSound>Ingest_Beer</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.18,0,0)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestCommandString>Drink {0}</ingestCommandString>
+      <ingestReportString>Drinking {0}.</ingestReportString>
+      <chairSearchRadius>25</chairSearchRadius>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MemoryHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>BW_WineofMemories</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.1</offset>
+          <toleranceChemical>BW_WineofMemories</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MemoryTolerance</hediffDef>
+          <severity>0.03</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>BW_WineofMemories</chemical>
+        <addictiveness>0.02</addictiveness>
+        <minToleranceToAddict>0.10</minToleranceToAddict>
+        <existingAddictionSeverityOffset>0.15</existingAddictionSeverityOffset>
+        <needLevelOffset>1</needLevelOffset>
+        <listOrder>110</listOrder>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>2</glowRadius>
+        <glowColor>(85,30,85,10)</glowColor>
+      </li>
+    </comps>
+  </ThingDef>
+  <HediffDef>
+    <defName>MemoryHigh</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>high on corpse flower memories</label>
+    <labelNoun>a corpse flower memory high</labelNoun>
+    <description>This pawn is savoring memories cultivated from the recently deceased.</description>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-3.0</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <restFallFactor>0.85</restFallFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.10</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>MemoryHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>MemoryHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>wine of memories high</label>
+        <description>To think: the life of that once intelligent mind, now mine to savor, then discard. Can any decadence top this? Their fading history fills me with delight.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!--========================================Memory Wine Addiction====================================-->
+  <ChemicalDef>
+    <defName>BW_WineofMemories</defName>
+    <label>wine of memories</label>
+    <addictionHediff>MemoryAddiction</addictionHediff>
+    <toleranceHediff>MemoryTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+    <onGeneratedAddictedEvents>
+      <li>
+        <hediff>Cirrhosis</hediff>
+        <chance>0.13</chance>
+        <partsToAffect>
+          <li>Liver</li>
+        </partsToAffect>
+      </li>
+    </onGeneratedAddictedEvents>
+  </ChemicalDef>
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_WineofMemories</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>wine of memories</label>
+    <description>Because of an addiction to the effects of drinking the wine of memories produced by Black Widows, this person needs to regularly consume the rare narcotic wine to avoid withdrawal symptoms.</description>
+    <listPriority>35</listPriority>
+  </NeedDef>
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>MemoryTolerance</defName>
+    <label>wine of memories tolerance</label>
+    <description>Due to heavy imbibement of Memory Wine, the substance no longer works quite as well as it used to. This pawn will need to consume more for the same effect and could experience health effects if they do not ween themselves off the drug.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.016</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>BW_WineofMemories</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>Cirrhosis</hediff>
+        <minSeverity>0.45</minSeverity>
+        <baseMtbDays>60</baseMtbDays>
+        <partsToAffect>
+          <li>Liver</li>
+        </partsToAffect>
+      </li>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>Carcinoma</hediff>
+        <minSeverity>0.45</minSeverity>
+        <baseMtbDays>180</baseMtbDays>
+        <partsToAffect>
+          <li>Liver</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+  <HediffDef ParentName="AddictionBase">
+    <defName>MemoryAddiction</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <label>wine of memories addiction</label>
+    <description>This pawn is addicted to devouring the memories of others.</description>
+    <causesNeed>Chemical_WineofMemories</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0333</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>memory withdrawal</label>
+        <socialFightChanceFactor>4.5</socialFightChanceFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.15</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>.18</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugMajor</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  <ThoughtDef>
+    <defName>MemoryWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>MemoryAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>alcohol withdrawal</label>
+        <description>All those wilted lives. All those fading memories. So sweet... need more.</description>
+        <baseMoodEffect>-45</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <!--================== Bases ==================-->
+  <!-- <ThingDef Name="ResourceBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>100</stackLimit>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef> -->
+</Defs>

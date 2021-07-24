@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef Abstract="True" Name="BaseBlackWidowPawnKind">
+    <race>Races_BlackWidow</race>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>BlackWidow_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <combatPower>40</combatPower>
+    <initialWillRange>2~6</initialWillRange>
+    <initialResistanceRange>55~74</initialResistanceRange>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+  <PawnKindDef ParentName="BaseBlackWidowPawnKind">
+    <defName>BlackWidow</defName>
+    <label>Widow</label>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>BlackWidow_Backstory</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags>
+      <li>BlackWidow</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <techHediffsTags>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <techHediffsChance>0.01</techHediffsChance>
+  </PawnKindDef>
+</Defs>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName = "UniversalFermenter"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes</xpath>
+    <value>
+      <li>
+        <thingDef>BW_WineofMemories</thingDef>
+        <ingredientFilter>
+          <thingDefs>
+            <li>BW_WineofMemoriesBase</li>
+          </thingDefs>
+        </ingredientFilter>
+        <processDays>15</processDays>
+      </li>
+    </value>
+  </Operation>
+</Patch>

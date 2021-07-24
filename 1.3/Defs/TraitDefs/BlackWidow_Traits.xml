@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraitDef>
+    <defName>WombMind</defName>
+    <commonality>0.01</commonality>
+    <degreeDatas>
+      <li>
+        <label>Brood Mind</label>
+        <description>{PAWN_nameDef}'s brood mind, a vast neural tangle of mutualist sentient mycelium embedded in the core of her womb, enables her predatory reproductive method and psionically amplifies her intellect and charm, but, in repayment, encourages her most violent tendencies and fills her with an insaciable desire for the sentient flesh the mycellium crave.</description>
+        <socialFightChanceFactor>5</socialFightChanceFactor>
+        <statOffsets>
+          <PsychicSensitivity>0.50</PsychicSensitivity>
+          <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+          <SocialImpact>0.15</SocialImpact>
+        </statOffsets>
+        <skillGains>
+          <li>
+            <key>Social</key>
+            <value>2</value>
+          </li>
+          <li>
+            <key>Intellectual</key>
+            <value>2</value>
+          </li>
+        </skillGains>
+        <!-- <minSeverity>1.00</minSeverity> -->
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <TraitDef>
+    <defName>CoreMind</defName>
+    <commonality>0.01</commonality>
+    <degreeDatas>
+      <li>
+        <label>Core Mind</label>
+        <description>{PAWN_nameDef}'s core mind, the normal brain one would find in any other sapient creature's skull cavity.</description>
+        <!-- <minSeverity>1.00</minSeverity> -->
+      </li>
+    </degreeDatas>
+  </TraitDef>
+</Defs>

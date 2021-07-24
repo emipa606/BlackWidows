@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Tribe -->
+  <RulePackDef>
+    <defName>NamerFactionCrystalVillage</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name-&gt;The [caveAdjective] [Cardinal] [Minerals]</li>
+        <li>name-&gt;The [Cardinal] [Shape] [Minerals]</li>
+        <li>name-&gt;[caveAdjective] [Caves] [terrainfeature]</li>
+        <li>name-&gt;[Cardinal] [Minerals] [terrainfeature]</li>
+        <li>name-&gt;The [Cardinal] [Shape] [Caves]</li>
+        <li>name-&gt;The [Cardinal] [Minerals] [Caves] </li>
+        <li>name-&gt;[color] [Minerals] [Caves]</li>
+        <li>name-&gt;The [caveAdjective] [Minerals] [Caves]</li>
+        <li>name-&gt;[caveAdjective] [Cardinal] [vesselRelated]</li>
+        <li>name-&gt;The [Cardinal] [Minerals] [vesselRelated]</li>
+        <li>name-&gt;[Cardinal] [Shape] [vesselRelated]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>Cardinal</keyword>
+          <path>Common/GreekCardinalPrefixes</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Shape</keyword>
+          <path>Common/ShapeSuffixes</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>lightVessel</keyword>
+          <path>Vessels/light</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>mediumVessel</keyword>
+          <path>Vessels/medium</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>heavyVessel</keyword>
+          <path>Vessels/heavy</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>type</keyword>
+          <path>Vessels/type</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>vesselRelated</keyword>
+          <path>Vessels/vesselRelated</path>
+        </li>
+        <!-- nouns -->
+        <li Class="Rule_File">
+          <keyword>politicalunion</keyword>
+          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Minerals</keyword>
+          <path>CrystalNames/Minerals</path>
+        </li>
+        <!-- adj -->
+        <li Class="Rule_File">
+          <keyword>Caves</keyword>
+          <path>CrystalNames/Locations</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>caveAdjective</keyword>
+          <path>CrystalNames/Adjective</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>positive</keyword>
+          <path>Words/Nouns/Concepts_Positive</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerBaseCrystalVillage</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name-&gt;[caveAdjective] [terrainfeature] [Caves]</li>
+        <li>name-&gt;[terrainfeature] of [Cardinal] [Caves]</li>
+        <li>name-&gt;[color] [Minerals] [Caves]</li>
+        <li>name-&gt;[color] [terrainfeature] [Caves]</li>
+        <li>name-&gt;[color] [caveAdjective] [Caves]</li>
+        <li>name-&gt;[caveAdjective] [Minerals] [Caves] </li>
+        <li>name-&gt;[caveAdjective] [vesselRelated] [Caves]</li>
+        <li>name-&gt;[heavyVessel] [type] [terrainfeature] [Caves]</li>
+        <li>name-&gt;[Cardinal] [Shape] [Caves]</li>
+        <li>name-&gt;[caveAdjective] [Cardinal] [Caves]</li>
+        <li>name-&gt;[caveAdjective] [Minerals] [terrainfeature]</li>
+        <li>name-&gt;[Minerals] [Caves] [terrainfeature]</li>
+        <li>name-&gt;[caveAdjective] [Cardinal] [Terrainfeature]</li>
+        <li>name-&gt;[Cardinal] [Shape] [Terrainfeature]</li>
+        <li>name-&gt;[Cardinal] [Minerals] [Terrainfeature]</li>
+        <li>name-&gt;[heavyVessel] [type] [Caves] [politicalunion]</li>
+        <li>name-&gt;[Caves] [Cardinal] [politicalunion]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>Cardinal</keyword>
+          <path>Common/GreekCardinalPrefixes</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Shape</keyword>
+          <path>Common/ShapeSuffixes</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>lightVessel</keyword>
+          <path>Vessels/light</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>mediumVessel</keyword>
+          <path>Vessels/medium</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>heavyVessel</keyword>
+          <path>Vessels/heavy</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>type</keyword>
+          <path>Vessels/type</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>vesselRelated</keyword>
+          <path>Vessels/vesselRelated</path>
+        </li>
+        <!-- noun -->
+        <li Class="Rule_File">
+          <keyword>politicalunion</keyword>
+          <path>Words/Nouns/PoliticalUnions_Outlander</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Caves</keyword>
+          <path>CrystalNames/Locations</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>caveAdjective</keyword>
+          <path>CrystalNames/Adjective</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Minerals</keyword>
+          <path>CrystalNames/Minerals</path>
+        </li>
+        <!-- Adj -->
+        <li Class="Rule_File">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+</Defs>
