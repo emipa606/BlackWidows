@@ -148,6 +148,7 @@
                     <li>FullHead</li>
                     <li>Eyes</li>
                   </groups>
+                  <woundAnchorTag>LeftEye</woundAnchorTag>
                 </li>
                 <li>
                   <def>Eye</def>
@@ -166,6 +167,7 @@
                     <li>FullHead</li>
                     <li>Eyes</li>
                   </groups>
+                  <woundAnchorTag>RightEye</woundAnchorTag>
                 </li>
                 <li>
                   <def>Eye</def>
@@ -220,6 +222,7 @@
           <groups>
             <li>BWShoulders</li>
           </groups>
+          <woundAnchorTag>LeftShoulder</woundAnchorTag>
           <parts>
             <li>
               <def>Clavicle</def>
@@ -428,6 +431,7 @@
           <groups>
             <li>BWShoulders</li>
           </groups>
+          <woundAnchorTag>RightShoulder</woundAnchorTag>
           <parts>
             <li>
               <def>Clavicle</def>
@@ -651,6 +655,7 @@
           <groups>
             <li>BlackWidowLegs</li>
           </groups>
+          <woundAnchorTag>LeftLeg</woundAnchorTag>
         </li>
         <li>
           <def>BlackWidowSecondLeftLeg</def>
@@ -679,6 +684,7 @@
           <groups>
             <li>BlackWidowLegs</li>
           </groups>
+          <woundAnchorTag>RightLeg</woundAnchorTag>
         </li>
         <li>
           <def>BlackWidowSecondRightLeg</def>

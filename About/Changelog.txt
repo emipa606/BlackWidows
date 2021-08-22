@@ -1,5 +1,8 @@
 # Changelog for BlackWidows
 
+1.0.4.0 - Wounds and bionics should now be at the correct place
+
+
 1.0.3.0 - Updated for 1.3
 
 
