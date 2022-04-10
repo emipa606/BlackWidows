@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Black Widows (Continued)</name>
   <packageId>Mlie.BlackWidows</packageId>
@@ -49,13 +49,13 @@
     <li>syrchalis.universalfermenter</li>
     <li>syrchalis.traitvalue</li>
   </loadAfter>
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of Zamnaths mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1365540920
 
 - Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2451324814][SYR] Trait Value[/url]
 
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+[img]https://i.imgur.com/pufA0kM.png[/img]
 
 [table]
 	[tr]
@@ -64,7 +64,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=1365540920
 	[/tr]
 [/table]
 	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
 
 Description:
 [Now updated for Rimworld 1.1!]
@@ -116,7 +116,7 @@ Known Bugs:
 * Sick widows sometimes refuse to gather silk from themselves. This can trigger on chronic issues like asthma, too. Fixing the health condition should allow them to gather silk again.
 
 
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[img]https://i.imgur.com/PwoNOj4.png[/img]
 [list]
 [*] See if the the error persists if you just have this mod and its requirements active.
 [*] If not, try adding your other mods until it happens again.
@@ -125,7 +125,5 @@ Known Bugs:
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [/list]
-
-
 </description>
 </ModMetaData>
