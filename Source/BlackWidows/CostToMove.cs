@@ -1,18 +1,15 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using HarmonyLib;
 using Verse;
 using Verse.AI;
 
 namespace BlackWidows
 {
-    // Token: 0x02000005 RID: 5
     [HarmonyPatch(typeof(Pawn_PathFollower), "CostToMoveIntoCell", typeof(Pawn), typeof(IntVec3))]
     internal class CostToMove
     {
-        // Token: 0x04000005 RID: 5
         private static readonly List<string> tags = new List<string>();
 
-        // Token: 0x06000004 RID: 4 RVA: 0x00002098 File Offset: 0x00000298
         public static void Postfix(ref int __result, Pawn pawn, IntVec3 c)
         {
             var modExtension = c.GetTerrain(pawn.Map).GetModExtension<TerrainCost>();

@@ -1,13 +1,11 @@
-﻿using RimWorld;
+using RimWorld;
 using Verse;
 using Verse.AI;
 
 namespace BlackWidows
 {
-    // Token: 0x02000009 RID: 9
     public class JobGiver_WidowMilkSelf : ThinkNode_JobGiver
     {
-        // Token: 0x0600000C RID: 12 RVA: 0x000025E8 File Offset: 0x000007E8
         protected override Job TryGiveJob(Pawn pawn)
         {
             if (pawn.AnimalOrWildMan())

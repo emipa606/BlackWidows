@@ -18,12 +18,6 @@
       <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
     </li>
     <li>
-      <packageId>UnlimitedHugs.HugsLib</packageId>
-      <displayName>HugsLib</displayName>
-      <steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
-      <downloadUrl>https://github.com/UnlimitedHugs/RimworldHugsLib/releases/latest</downloadUrl>
-    </li>
-    <li>
       <packageId>erdelf.HumanoidAlienRaces</packageId>
       <displayName>Humanoid Alien Races</displayName>
       <steamWorkshopUrl>steam://url/CommunityFilePage/839005762</steamWorkshopUrl>
@@ -43,7 +37,6 @@
   </modDependencies>
   <loadAfter>
     <li>brrainz.harmony</li>
-    <li>UnlimitedHugs.HugsLib</li>
     <li>erdelf.HumanoidAlienRaces</li>
     <li>jecrell.jecstools</li>
     <li>syrchalis.universalfermenter</li>
@@ -129,5 +122,6 @@ Known Bugs:
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
 [/list]
+
 </description>
 </ModMetaData>

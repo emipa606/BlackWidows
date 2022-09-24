@@ -1,27 +1,21 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using RimWorld;
 using Verse;
 using Verse.AI;
 
 namespace BlackWidows
 {
-    // Token: 0x0200000B RID: 11
     public class JobDriver_MilkHumanoidWidow : JobDriver
     {
-        // Token: 0x04000009 RID: 9
         private float gatherProgress;
 
-        // Token: 0x17000003 RID: 3
-        // (get) Token: 0x06000012 RID: 18 RVA: 0x000027A0 File Offset: 0x000009A0
         protected float WorkTotal => 400f;
 
-        // Token: 0x06000013 RID: 19 RVA: 0x000027B8 File Offset: 0x000009B8
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             return true;
         }
 
-        // Token: 0x06000014 RID: 20 RVA: 0x000027CB File Offset: 0x000009CB
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDespawnedNullOrForbidden(TargetIndex.A);
