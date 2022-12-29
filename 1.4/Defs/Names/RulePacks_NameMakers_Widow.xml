@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerPersonCrystal</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name-&gt;[Caves] '[Shape]' [Minerals]</li>
+        <li>name-&gt;[Caves] '[Cardinal][Shape]' [Minerals]</li>
+        <li>name-&gt;[Caves] '[caveAdjective]' [Minerals]</li>
+        <li>name-&gt;[caveAdjective] '[Cardinal]' [Shape]</li>
+        <li>name-&gt;[caveAdjective] '[GreekAlphabet][color]' [Minerals]</li>
+        <li>name-&gt;[color] '[Minerals]' [Cardinal][Shape]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>Cardinal</keyword>
+          <path>Common/GreekCardinalPrefixes</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Shape</keyword>
+          <path>Common/ShapeSuffixes</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Minerals</keyword>
+          <path>CrystalNames/Minerals</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Caves</keyword>
+          <path>CrystalNames/Locations</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>caveAdjective</keyword>
+          <path>CrystalNames/Adjective</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>GreekAlphabet</keyword>
+          <path>Common/GreekAlphabet</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>color</keyword>
+          <path>Words/Nouns/Colors</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+</Defs>

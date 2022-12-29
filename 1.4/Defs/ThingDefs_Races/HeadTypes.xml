@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BW_Female_Average_BWNormal</defName>
+    <graphicPath>Things/Widows/Heads/Female_Average_BWNormal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BW_Female_Average_BWPointy</defName>
+    <graphicPath>Things/Widows/Heads/Female_Average_BWPointy</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BW_Female_Average_BWWide</defName>
+    <graphicPath>Things/Widows/Heads/Female_Average_BWWide</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="NarrowBase">
+    <defName>BW_Female_Narrow_BWNormal</defName>
+    <graphicPath>Things/Widows/Heads/Female_Narrow_BWNormal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="NarrowBase">
+    <defName>BW_Female_Narrow_BWPointy</defName>
+    <graphicPath>Things/Widows/Heads/Female_Narrow_BWPointy</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="NarrowBase">
+    <defName>BW_Female_Narrow_BWWide</defName>
+    <graphicPath>Things/Widows/Heads/Female_Narrow_BWWide</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BW_Male_Average_BWNormal</defName>
+    <graphicPath>Things/Widows/Heads/Male_Average_BWNormal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BW_Male_Average_BWPointy</defName>
+    <graphicPath>Things/Widows/Heads/Male_Average_BWPointy</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>BW_Male_Average_BWWide</defName>
+    <graphicPath>Things/Widows/Heads/Male_Average_BWWide</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="NarrowBase">
+    <defName>BW_Male_Narrow_BWNormal</defName>
+    <graphicPath>Things/Widows/Heads/Male_Narrow_BWNormal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="NarrowBase">
+    <defName>BW_Male_Narrow_BWPointy</defName>
+    <graphicPath>Things/Widows/Heads/Male_Narrow_BWPointy</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="NarrowBase">
+    <defName>BW_Male_Narrow_BWWide</defName>
+    <graphicPath>Things/Widows/Heads/Male_Narrow_BWWide</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+</Defs>

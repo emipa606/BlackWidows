@@ -1,9 +1,8 @@
 using Verse;
 
-namespace BlackWidows
+namespace BlackWidows;
+
+[StaticConstructorOnStartup]
+public static class PostPatch
 {
-    [StaticConstructorOnStartup]
-    public static class PostPatch
-    {
-    }
 }

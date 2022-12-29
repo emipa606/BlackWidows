@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef Abstract="True" Name="BlackWidowFactionsettlement" ParentName="FactionBase">
+    <colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+  <FactionDef Parent="BlackWidowFactionsettlement">
+    <defName>BlackWidowPlayerColony</defName>
+    <label>Black Widow Enclave</label>
+    <description>Your own community. Raid, pillage, and make this Rimworld yours!</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>BlackWidow</basicMemberKind>
+    <pawnsPlural>Widows</pawnsPlural>
+    <techLevel>Spacer</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Civil</li>
+          <li>Tribal</li>
+        </categories>
+        <commonality>1</commonality>
+      </li>
+    </backstoryFilters>
+    <settlementTexturePath>Things/World/BlackWidow</settlementTexturePath>
+    <factionIconPath>Things/World/BlackWidow</factionIconPath>
+    <!--<expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>-->
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <allowedCultures>
+      <li>Astropolitan</li>
+    </allowedCultures>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35,     15)</li>
+        <li>(100,   120)</li>
+        <li>(1000,  500)</li>
+        <li>(2000,  800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+  </FactionDef>
+</Defs>

@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using Verse;
 
-namespace BlackWidows
+namespace BlackWidows;
+
+public class PawnTerrainHandler : DefModExtension
 {
-    public class PawnTerrainHandler : DefModExtension
-    {
-        public List<string> tags;
-    }
+    public List<string> tags;
 }

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraderKindDef>
+    <defName>Visitor_BlackWidow_Standard</defName>
+    <label>blackwidowtrader</label>
+    <stockGenerators>
+      <!-- Resources -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>2000~2500</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentIndustrial</thingDef>
+        <countRange>30~40</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Steel</thingDef>
+        <countRange>250~400</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>WoodLog</thingDef>
+        <countRange>250~400</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Cloth</thingDef>
+        <countRange>250~400</countRange>
+        <price>Cheap</price>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Beer</thingDef>
+        <countRange>250~400</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>ResourcesRaw</categoryDef>
+        <excludedCategories>
+          <li>PlantMatter</li>
+        </excludedCategories>
+        <thingDefCountRange>2~4</thingDefCountRange>
+        <countRange>250~400</countRange>
+        <excludedThingDefs>
+          <li>Silver</li>
+        </excludedThingDefs>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>FoodRaw</categoryDef>
+        <excludedCategories>
+          <li>EggsFertilized</li>
+        </excludedCategories>
+        <thingDefCountRange>3~3</thingDefCountRange>
+        <totalPriceRange>150~600</totalPriceRange>
+        <price>Cheap</price>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>Textiles</categoryDef>
+        <price>Cheap</price>
+      </li>
+      <!-- Drugs -->
+      <li Class="StockGenerator_Category">
+        <categoryDef>Drugs</categoryDef>
+      </li>
+      <!-- Techprints -->
+      <!-- none -->
+      <!-- Weapons -->
+      <!-- none -->
+      <!-- Apparel -->
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>Clothing</tradeTag>
+        <countRange>2~10</countRange>
+        <price>Expensive</price>
+      </li>
+      <!-- Implants -->
+      <!-- none -->
+      <!-- Buildings -->
+      <!-- Exotic -->
+      <!-- none -->
+      <!-- Slaves -->
+      <li Class="StockGenerator_Slaves">
+        <respectPopulationIntent>false</respectPopulationIntent>
+        <countRange>-3~3</countRange>
+      </li>
+      <!-- Animals -->
+      <li Class="StockGenerator_Animals">
+        <!-- <maxWildness>0.70</maxWildness> -->
+        <tradeTagsBuy>
+          <li>AnimalExotic</li>
+          <li>AnimalPet</li>
+          <li>AnimalFarm</li>
+        </tradeTagsBuy>
+      </li>
+      <!-- Buying -->
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag">
+        <tag>Art</tag>
+      </li>
+      <li Class="StockGenerator_BuyTradeTag">
+        <tag>MusicalInstrument</tag>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>Gold</thingDef>
+      </li>
+    </stockGenerators>
+  </TraderKindDef>
+</Defs>

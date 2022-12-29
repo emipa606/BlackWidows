@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--========================= Tier 4: Hi-tech research bench with multi-analyzer ===================================-->
+  <ResearchProjectDef>
+    <defName>BWGardens</defName>
+    <label>black widow gardening</label>
+    <description>Black widows typically make their homes in vast subterannean complexes, generally emerging into the sunlight only for recreation and hunting. As a result, their agriculture focuses mostly on growing in low light environments. Unlocks black widow garden soil and gravespark bushes.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>BlackWidowResearch</tab>
+    <!--<prerequisites>
+			<li>Bionics</li>
+		</prerequisites>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>-->
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>BWCorpseFlowers</defName>
+    <label>black widow corpse flowers</label>
+    <description>Black widow corpse flowers feed off of the latent psychic impulses of deceased humanoids. Their blooms illuminate the dark grottos and chambers of widow gardens, allowing them to grow a wide variety of plants, and, when they fall, they can be fermented into a light narcotic wine that, when consumed, evokes the memories of the sentients that the flowers consumed.</description>
+    <baseCost>250</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>BlackWidowResearch</tab>
+    <prerequisites>
+      <li>BWGardens</li>
+    </prerequisites>
+    <!--<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>-->
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>BWBionics</defName>
+    <label>black widow bionics</label>
+    <description>The most dangerous soldiers in the Black Widow military are augmented with bionics specifically designed to render their already impressive natural weaponry into tools of mass destruction. Unlocks Black Widow Shredder Legs and Black Widow Bionic Pedipalps.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>BlackWidowResearch</tab>
+    <prerequisites>
+      <li>Bionics</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>BWWidowThrone</defName>
+    <label>black widow tomb-throne</label>
+    <description>A product of illicit reaver technology, the production of tomb thrones is illegal in all core worlds of the Black Widow Empire. The empire's military still makes heavy use of the throne silk that can only be weaved from the materials produced by these widow reimaginings of the cryptosleep casket, however, and this has led to a booming industry for rogue reaver clans on distant rimworlds.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>BlackWidowResearch</tab>
+    <prerequisites>
+      <li>MultiAnalyzer</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>BWAbyssSilk</defName>
+    <label>black widow abyss silk weaving</label>
+    <description>Abyss silk, a composite material woven from widowsilk and throne silk, is incredibly beautiful, resilient, and valuable. Only the finest crafters can create it, and it requires terrible sacrifices to create.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Ultra</techLevel>
+    <tab>BlackWidowResearch</tab>
+    <prerequisites>
+      <li>BWWidowThrone</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+    <requiredResearchFacilities>
+      <li>MultiAnalyzer</li>
+    </requiredResearchFacilities>
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+</Defs>

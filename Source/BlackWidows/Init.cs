@@ -2,15 +2,14 @@ using System.Reflection;
 using HarmonyLib;
 using Verse;
 
-namespace BlackWidows
+namespace BlackWidows;
+
+[StaticConstructorOnStartup]
+internal static class Init
 {
-    [StaticConstructorOnStartup]
-    internal static class Init
+    static Init()
     {
-        static Init()
-        {
-            var harmony = new Harmony("zamnath.BlackWidows");
-            harmony.PatchAll(Assembly.GetExecutingAssembly());
-        }
+        var harmony = new Harmony("zamnath.BlackWidows");
+        harmony.PatchAll(Assembly.GetExecutingAssembly());
     }
 }

@@ -1,0 +1,743 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="BaseBlackWidow" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_Social</li>
+    </inspectorTabs>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+  <!-- ============================ black_widow ========================== -->
+  <AlienRace.RaceSettings>
+    <defName>BW_WidowSettings</defName>
+    <pawnKindSettings>
+      <alienrefugeekinds>
+        <li>
+          <kindDefs>
+            <li>BlackWidowRefugee</li>
+          </kindDefs>
+          <chance>5.0</chance>
+        </li>
+      </alienrefugeekinds>
+      <alienslavekinds>
+        <li>
+          <kindDefs>
+            <li>BlackWidowSlave</li>
+          </kindDefs>
+          <chance>2.5</chance>
+        </li>
+      </alienslavekinds>
+      <startingColonists>
+        <li>
+          <pawnKindEntries>
+            <li>
+              <kindDefs>
+                <li>BlackWidow</li>
+              </kindDefs>
+              <chance>10.0</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs>
+            <li>PlayerColony</li>
+            <li>PlayerTribe</li>
+            <li>BlackWidowPlayerColony</li>
+          </factionDefs>
+        </li>
+      </startingColonists>
+    </pawnKindSettings>
+  </AlienRace.RaceSettings>
+  <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+    <defName>Races_BlackWidow</defName>
+    <label>black widow</label>
+    <description>A baseline Black Widow, a being possessed of two separate inter-linked minds and spiderlike features. Infamous for their tendency toward violence in the pursuit of mates.</description>
+    <comps>
+      <li Class="BlackWidows.CompProperties_WidowMilkableHumanoid">
+        <milkDef>WidowSilk</milkDef>
+        <ticksUntilMilking>60000</ticksUntilMilking>
+        <milkAmount>30</milkAmount>
+        <milkThoughtMilker>MilkyMilkWidow</milkThoughtMilker>
+        <milkThoughtMilked>MilkyMilkedWidow</milkThoughtMilked>
+        <milkThoughtMilkedSelf>MilkyMilkedSelfMoodWidow</milkThoughtMilkedSelf>
+        <minimumAgeToBeMilked>16</minimumAgeToBeMilked>
+        <firstResourceName>True</firstResourceName>
+        <forbiddenJobsToInterrupt>
+          <li>GotoSafeTemperature</li>
+          <li>Wait_Combat</li>
+          <li>AttackStatic</li>
+          <li>AttackMelee</li>
+          <li>SocialFight</li>
+          <li>UseNeurotrainer</li>
+          <li>UseArtifact</li>
+          <li>Flee</li>
+          <li>FleeAndCower</li>
+          <li>Resurrect</li>
+          <li>BeatFire</li>
+          <li>ExtinguishSelf</li>
+          <li>Lovin</li>
+          <li>Rescue</li>
+          <li>Capture</li>
+          <li>TakeToBedToOperate</li>
+          <li>TakeWoundedPrisonerToBed</li>
+          <li>EscortPrisonerToBed</li>
+          <li>FeedPatient</li>
+          <li>TendPatient</li>
+        </forbiddenJobsToInterrupt>
+      </li>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="BlackWidows.PawnTerrainHandler">
+        <tags>
+          <li>BlackWidow</li>
+        </tags>
+      </li>
+    </modExtensions>
+    <alienRace>
+      <generalSettings>
+        <maleGenderProbability>0.0</maleGenderProbability>
+        <!--<useOnlyPawnkindBackstories>true</useOnlyPawnkindBackstories>-->
+        <!--<pawnsSpecificBackstories>true</pawnsSpecificBackstories>-->
+        <forcedRaceTraitEntries>
+          <li>
+            <defName>Beauty</defName>
+            <degree>2</degree>
+            <chance>25</chance>
+          </li>
+          <li>
+            <defName>Beauty</defName>
+            <degree>1</degree>
+            <chance>25</chance>
+          </li>
+          <li>
+            <defName>Psychopath</defName>
+            <chance>25</chance>
+          </li>
+          <li>
+            <defName>Bloodlust</defName>
+            <chance>0</chance>
+          </li>
+          <li>
+            <defName>Cannibal</defName>
+            <chance>0</chance>
+          </li>
+          <li>
+            <defName>Xenophobia</defName>
+            <degree>1</degree>
+            <chance>0</chance>
+          </li>
+          <li>
+            <defName>Xenophobia</defName>
+            <degree>-1</degree>
+            <chance>10</chance>
+          </li>
+          <li>
+            <defName>WombMind</defName>
+          </li>
+        </forcedRaceTraitEntries>
+        <maxDamageForSocialfight>6</maxDamageForSocialfight>
+        <humanRecipeImport>true</humanRecipeImport>
+        <alienPartGenerator>
+          <!--<aliencrowntypes>
+						<li>Average_Normal</li>
+					</aliencrowntypes> -->
+          <!-- <alienbodytypes>
+						<li>Male</li>
+						<li>Female</li>
+						<li>Thin</li>
+						<li>Hulk</li>			
+					</alienbodytypes> -->
+          <headTypes Inherit="False">
+            <li>BW_Female_Average_BWNormal</li>
+            <li>BW_Female_Average_BWPointy</li>
+            <li>BW_Female_Average_BWWide</li>
+            <li>BW_Female_Narrow_BWNormal</li>
+            <li>BW_Female_Narrow_BWPointy</li>
+            <li>BW_Female_Narrow_BWWide</li>
+            <li>BW_Male_Average_BWNormal</li>
+            <li>BW_Male_Average_BWPointy</li>
+            <li>BW_Male_Average_BWWide</li>
+            <li>BW_Male_Narrow_BWNormal</li>
+            <li>BW_Male_Narrow_BWPointy</li>
+            <li>BW_Male_Narrow_BWWide</li>
+          </headTypes>
+          <bodyTypes Inherit="False">
+            <li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
+            <li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
+            <li>Female</li>
+            <li>Thin</li>
+            <li>Hulk</li>
+            <li>Fat</li>
+          </bodyTypes>
+          <bodyAddons>
+            <li>
+              <path>Things/Widows/Ears/Ear</path>
+              <!-- <bodyPart>Ear</bodyPart> -->
+              <inFrontOfBody>true</inFrontOfBody>
+              <colorChannel>skin</colorChannel>
+              <defaultOffset>Tail</defaultOffset>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <!-- <Male>(-0.45,.67)</Male> -->
+                    <Female>(-0.44,.67)</Female>
+                    <Thin>(-0.44,.67)</Thin>
+                    <Hulk>(-0.44,.67)</Hulk>
+                    <Fat>(-0.44,.67)</Fat>
+                  </bodyTypes>
+                  <!-- <crownTypes>
+										<Normal_Average>(0,0.7)</Normal_Average>
+									</crownTypes> -->
+                  <!-- <portraitBodyTypes>
+										<Male>(-0.4,.67)</Male>
+										<Female>(-0.4,.67)</Female>
+										<Thin>(-0.4,.67)</Thin>
+										<Hulk>(-0.4,.67)</Hulk>
+									</portraitBodyTypes> -->
+                  <layerOffset>-0.1</layerOffset>
+                </south>
+                <north>
+                  <bodyTypes>
+                    <!-- <Male>(0,.95)</Male> -->
+                    <Female>(-0,1)</Female>
+                    <Thin>(-0,1)</Thin>
+                    <Hulk>(-0,1)</Hulk>
+                    <Fat>(-0,1)</Fat>
+                  </bodyTypes>
+                  <!--<crownTypes>
+										<Normal_Average>(0,0.7)</Normal_Average>
+									</crownTypes> -->
+                  <layerOffset>-0.1</layerOffset>
+                </north>
+                <east>
+                  <bodyTypes>
+                    <!-- <Male>(-0,.65)</Male> -->
+                    <Female>(-0.55,.655)</Female>
+                    <Thin>(-0.55,.655)</Thin>
+                    <Hulk>(-0.55,.655)</Hulk>
+                    <Fat>(-0.55,.655)</Fat>
+                  </bodyTypes>
+                  <!--<crownTypes>
+										<Normal_Average>(0,0.7)</Normal_Average>
+									</crownTypes> -->
+                  <layerOffset>-0.1</layerOffset>
+                </east>
+              </offsets>
+              <hiddenUnderApparelFor>
+                <li>FullHead</li>
+              </hiddenUnderApparelFor>
+            </li>
+            <!--<li>
+							<path>Things/Widows/WidowsBodyBionic/Invisible</path>
+							<bodyPart>bionic left pedipalp</bodyPart>
+							<inFrontOfBody>true</inFrontOfBody>
+							<useSkinColor>false</useSkinColor>
+							<hediffGraphics>
+								<BionicLeftPedipalp>Things/Widows/WidowsBodyBionic/BionicLeftPedipalp</BionicLeftPedipalp>
+							</hediffGraphics>							
+						</li>-->
+            <!--<li>
+							<path>Things/Widows/WidowsBodyBionic/Invisible</path>
+							<hediffGraphics>
+								<BionicLeftPedipalp>Things/Widows/WidowsBodyBionic/BionicLeftPedipalp</BionicLeftPedipalp>
+							</hediffGraphics>
+							<inFrontOfBody>true</inFrontOfBody>
+							<useSkinColor>false</useSkinColor>
+							<layerOffset>-0.275</layerOffset>							
+						</li>-->
+          </bodyAddons>
+          <colorChannels>
+            <li>
+              <name>skin</name>
+              <first Class="ColorGenerator_Options">
+                <options>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(1.0,1.0,1.0,1)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.5,0.5,0.5,1)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.3,0.3,0.3,1)</only>
+                  </li>
+                  <li>
+                    <weight>5</weight>
+                    <only>RGBA(0.8,0.5,0.5,1)</only>
+                  </li>
+                  <li>
+                    <weight>5</weight>
+                    <only>RGBA(0.6,0.3,0.0,1)</only>
+                  </li>
+                  <li>
+                    <weight>5</weight>
+                    <only>RGBA(0.576,0.475,0.4,1)</only>
+                  </li>
+                  <li>
+                    <weight>1</weight>
+                    <only>RGBA(0.502,0.071,0.145,1)</only>
+                  </li>
+                </options>
+              </first>
+            </li>
+          </colorChannels>
+          <customDrawSize>(01.3, 1.3)</customDrawSize>
+          <customHeadDrawSize>(0.9, 0.9)</customHeadDrawSize>
+          <customPortraitDrawSize>(1.3, 1.3)</customPortraitDrawSize>
+          <headOffset>(0.0, 0.15)</headOffset>
+        </alienPartGenerator>
+      </generalSettings>
+      <graphicPaths>
+        <head>Things/Widows/Head/</head>
+        <body>Things/Widows/Body/</body>
+        <skinShader>Cutout</skinShader>
+      </graphicPaths>
+      <thoughtSettings>
+        <cannotReceiveThoughts>
+          <li>NeedOutdoors</li>
+          <li>Naked</li>
+          <li>HumanLeatherApparelSad</li>
+        </cannotReceiveThoughts>
+        <butcherThoughtGeneral>
+          <thought>ButcheredHumanlikeCorpseWidow</thought>
+          <knowThought>KnowButcheredHumanlikeCorpseWidow</knowThought>
+        </butcherThoughtGeneral>
+        <ateThoughtGeneral>
+          <thought>AteHumanlikeMeatDirectWidow</thought>
+          <ingredientThought>AteHumanlikeMeatAsIngredientWidow</ingredientThought>
+        </ateThoughtGeneral>
+        <butcherThoughtSpecific>
+          <li>
+            <raceList>
+              <li>Races_BlackWidow</li>
+            </raceList>
+            <thought>ButcheredHumanlikeCorpse</thought>
+            <knowThought>KnowButcheredHumanlikeCorpse</knowThought>
+          </li>
+        </butcherThoughtSpecific>
+        <!-- <ateThoughtSpecific>
+                <li>
+                    <raceList>
+                        <li>Races_BlackWidow</li>
+                    </raceList>
+                    <thought>AteHumanlikeMeatDirect</thought>
+                    <ingredientThought>AteHumanIngredient</ingredientThought>
+                </li>
+            </ateThoughtSpecific> -->
+        <ateThoughtSpecific>
+          <li>
+            <raceList>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Base</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Arid</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Bears</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_BigCats</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Birds</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Farm</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Giant</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Hares</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Insect</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Pet</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Rodentlike</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Temperate</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_Tropical</li>
+              <li MayRequire="CETeam.CombatExtended">Races_Animal_WildCanines</li>
+            </raceList>
+            <thought>AteRegularMeatAsIngredientWidow</thought>
+            <ingredientThought>WidowAteRegularIngredientDirect</ingredientThought>
+          </li>
+        </ateThoughtSpecific>
+      </thoughtSettings>
+      <!-- Restrictions -->
+      <raceRestriction>
+        <apparelList>
+          <li>Apparel_MAGISuit</li>
+          <li>Apparel_BWTubeTop</li>
+          <li>Apparel_HoverThrone</li>
+          <li>Apparel_BWDaisyDukes</li>
+          <li>Apparel_BWLingerie</li>
+          <li>Apparel_BWSpiderFurs</li>
+          <li>Apparel_BWWidowVeil</li>
+          <li>Apparel_BWWidowCrown</li>
+          <li>Apparel_BWNurseCostume</li>
+          <li>Apparel_BWReaverHelm</li>
+          <li>Apparel_BWMAGISuitHelm</li>
+          <li>Apparel_BWWidowMaidHelm</li>
+          <li>Apparel_BWGlasses</li>
+        </apparelList>
+        <onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+        <whiteApparelList>
+          <li>Apparel_CowboyHat</li>
+          <li>Apparel_BowlerHat</li>
+          <li>Apparel_TribalHeaddress</li>
+          <li>Apparel_Tuque</li>
+          <li>Apparel_WarMask</li>
+          <li>Apparel_WarVeil</li>
+          <li>Apparel_SimpleHelmet</li>
+          <li>Apparel_AdvancedHelmet</li>
+          <li>Apparel_PowerArmorHelmet</li>
+          <li>Apparel_PsychicFoilHelmet</li>
+          <li MayRequire="rimsenal.EVP">Apparel_TacHelmet</li>
+          <li MayRequire="rimsenal.EVP">Apparel_ProtectiveHelmet</li>
+          <!-- <li>Apparel_HuskerHood</li> -->
+          <!-- <li>Apparel_SkulkerHood</li> -->
+          <!-- <li>Apparel_ThumperHood</li> -->
+          <!-- <li>Apparel_GrinderHelmet</li> -->
+          <!-- <li>Apparel_ScorcherHelmet</li> -->
+          <!-- <li>Apparel_LaconianH</li> -->
+          <li MayRequire="rimsenal.core">Apparel_DropsuitH</li>
+          <!-- <li>Apparel_NervesuitH</li> -->
+          <!-- <li>Apparel_BjornH</li> -->
+          <li MayRequire="rimsenal.core">Apparel_FSArmorH</li>
+          <!-- <li>Apparel_NemesisH</li> -->
+          <li MayRequire="rimsenal.core">Apparel_HazardCarapaceH</li>
+          <li MayRequire="rimsenal.core">Apparel_CloseCombatHelmet</li>
+          <li MayRequire="Mlie.LordoftheRimsElves">LotRE_ElfApparel_BattleHelmetSea</li>
+          <li MayRequire="Mlie.LordoftheRimsElves">LotRE_ElfApparel_BattleHelmetWood</li>
+          <li MayRequire="Mlie.LordoftheRimsElves">LotRE_ElfApparel_BattleHelmetTree</li>
+          <li MayRequire="Mlie.LordoftheRimsElves">LotRE_ElfApparel_BattleHelmet</li>
+          <li MayRequire="Mlie.LordoftheRimsElves">LotRE_ElfApparel_WoodElfCrown</li>
+          <!-- <li>Apparel_LeviathanH</li> -->
+          <!-- <li>Apparel_ACPCarapaceHelmet</li> -->
+          <li MayRequire="spoonshortage.fashionrimsta">Apparel_FSFurHat</li>
+          <li MayRequire="spoonshortage.fashionrimsta">Apparel_FSDesertWrap</li>
+          <li MayRequire="spoonshortage.fashionrimsta">Apparel_FSChefsHat</li>
+          <li MayRequire="spoonshortage.fashionrimsta">Apparel_FSSurgicalMask</li>
+          <li MayRequire="spoonshortage.fashionrimsta">Apparel_FSGasmask</li>
+          <!-- <li>Apparel_JudicatorH</li> -->
+          <!-- <li>Apparel_MarksmanGearH</li> -->
+          <!-- <li>Apparel_UGHelmet</li> -->
+          <li MayRequire="Shinzy.Apparello">Apparello_Goggles</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Visoor</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Shadess</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Piloggle</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Brimsk</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Doom</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Quotee</li>
+          <li MayRequire="Shinzy.Apparello">Apparel_Psymask</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Zorro</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Footy</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Meffect</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Meffectwo</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Kurt</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Kurtlite</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Rockman</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Raideroos</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Yi</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Raz</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Mojo</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Mojotwo</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_MojoFeather</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Wendywelder</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Hardhat</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Chefhat</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Chefhatplus</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Cyninja</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Medihelmet</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Proto</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_ProtoFin</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Commissar</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Gassy</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Cybissar</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Medband</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Docteur</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Plainhat</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Furhat</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Bandit</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Cardshark</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Sandtrader</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Tradecone</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Fedora</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Headset</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Beret</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Tophat</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Bandal</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Vandal</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Lecap</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Hoood</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Sombrero</li>
+          <li MayRequire="Shinzy.Apparello">Apparello_Moron</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_ROM_SlickerHat</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_ROM_StrawHat</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel1920sPoliceHat</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_ApparelWWIHelmet</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_NurseCap</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_CallOfCthulhuTopHat</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_CallOfCthulhuNewsboyCap</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_CallOfCthulhuFedora</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_CallOfCthulhuBowler</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_MERF_LightHelmet</li>
+          <li MayRequire="Mlie.CallofCthulhuFactions">ROM_Apparel_MERF_HeavyHelmet</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_BastMask</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_CultistHood</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_HasturHood</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_CthulhuMaskHood</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_NyarlathotepHood</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_DagonMitre</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_ShubMask</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_StandardHood</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_SailorsCap</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_NanoSuitHelmet</li>
+          <li MayRequire="Mlie.CallofCthulhuCults">Apparel_OCHelmet</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Headgear_ArmingCap</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Headgear_WinterHat</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Wooden</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Headwrap</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Domed</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Sallet</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Nasal</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_FullPlated</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Warbourne</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Bascinet</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_ConicalBascinet</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_RoyalMask</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_DeathMask</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Wooden_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Headwrap_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Domed_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Sallet_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Nasal_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_FullPlated_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Warbourne_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Bascinet_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_ConicalBascinet_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_RoyalMask_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_DeathMask_Nan</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_GodKingBlue_Art</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_GodKingGreen_Art</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Warlord_Art</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Torvald_Art</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Combat_Art</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_GodKingBlue_Leg</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_GodKingGreen_Leg</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Warlord_Leg</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Torvald_Leg</li>
+          <li MayRequire="vindar.medievaltimes">MedTimes_Helm_Combat_Leg</li>
+        </whiteApparelList>
+      </raceRestriction>
+    </alienRace>
+    <!--<uiIconPath>Things/Pawn/Humanlike/UI/IconHuman</uiIconPath>-->
+    <statBases>
+      <MarketValue>2100</MarketValue>
+      <MoveSpeed>6.5</MoveSpeed>
+      <!--Nyooooooooom-->
+      <Flammability>1.0</Flammability>
+      <ComfyTemperatureMin>-40</ComfyTemperatureMin>
+      <ComfyTemperatureMax>35</ComfyTemperatureMax>
+      <LeatherAmount>35</LeatherAmount>
+      <ResearchSpeed>1.35</ResearchSpeed>
+      <MiningSpeed>0.8</MiningSpeed>
+      <SocialImpact>1.25</SocialImpact>
+      <MeleeDodgeChance>-0.15</MeleeDodgeChance>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.1</ArmorRating_Heat>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>18</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.4</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>18</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>Brood Mind</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>3.0</cooldownTime>
+        <linkedBodyPartsGroup>Torso</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>45</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>90</lifeExpectancy>
+      <leatherDef>Leather_BlackWidow</leatherDef>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>BlackWidow</body>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>32.5</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, .30)</li>
+          <li>(2, .40)</li>
+          <li>(3, .10)</li>
+          <li>(4, .20)</li>
+          <li>(5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+          <!--<milkable>true</milkable>	-->
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>0.5</minAge>
+          <!--<milkable>true</milkable>-->
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>HumanlikePreTeenager</def>
+          <minAge>1.5</minAge>
+          <!--<milkable>true</milkable>	-->
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>14</minAge>
+          <!--<milkable>true</milkable>	-->
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+          <!--<milkable>true</milkable>	-->
+        </li>
+      </lifeStageAges>
+      <lifeStageWorkSettings MayRequire="Ludeon.RimWorld.Biotech">
+        <Firefighter>7</Firefighter>
+        <Patient>0</Patient>
+        <Doctor>10</Doctor>
+        <PatientBedRest>0</PatientBedRest>
+        <Childcare MayRequire="Ludeon.RimWorld.Biotech">0</Childcare>
+        <BasicWorker>7</BasicWorker>
+        <Warden>10</Warden>
+        <Handling>7</Handling>
+        <Cooking>7</Cooking>
+        <Hunting>7</Hunting>
+        <Construction>10</Construction>
+        <Growing>7</Growing>
+        <Mining>7</Mining>
+        <PlantCutting>7</PlantCutting>
+        <Smithing>13</Smithing>
+        <Tailoring>7</Tailoring>
+        <Art>10</Art>
+        <Crafting>7</Crafting>
+        <Hauling>3</Hauling>
+        <Cleaning>3</Cleaning>
+        <Research>13</Research>
+      </lifeStageWorkSettings>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <ageGenerationCurve>
+        <points>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(0,0)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(0.001,43)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(8,86)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(12.5,118)</li>
+          <!-- Exclude 12.5-13 years to avoid spawning pawns who are very close to becoming adults -->
+          <li MayRequire="Ludeon.RimWorld.Biotech">(12.51,0)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(13,0)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(13.001,122)</li>
+          <!-- End exclude -->
+          <li MayRequire="Ludeon.RimWorld.Biotech">(13.999,130)</li>
+          <li>(14,0)</li>
+          <li MayRequire="Ludeon.RimWorld.Biotech">(14.001,130)</li>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+    </race>
+    <recipes>
+      <li>InstallWombMind</li>
+      <!--<li>InstallCoreMind</li>-->
+      <li>RemoveBodyPart</li>
+      <li>BlackWidow_InstallTRightArm</li>
+      <li>BlackWidow_InstallTLeftArm</li>
+      <li>BlackWidow_InstallBLeftArm</li>
+      <li>BlackWidow_InstallSecondLeftLeg</li>
+      <li>BlackWidow_InstallTRightArm</li>
+      <li>BlackWidow_InstallFirstLeftLeg</li>
+      <li>BlackWidow_InstallThirdLeftLeg</li>
+      <li>BlackWidow_InstallFourthLeftLeg</li>
+      <li>BlackWidow_InstallFirstRightLeg</li>
+      <li>BlackWidow_InstallSecondRightLeg</li>
+      <li>BlackWidow_InstallThirdRightLeg</li>
+      <li>BlackWidow_InstallFourthRightLeg</li>
+      <li>InstallBionicRightPedipalp</li>
+      <li>InstallBionicLeftPedipalp</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallSimpleProstheticArmBlackWidow</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
+      <li>InstallBionicSpine</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicEye</li>
+      <li>InstallArchotechEye</li>
+      <li>InstallSimpleProstheticSpiderLeg</li>
+      <li>InstallBlackWidowShredderLeg</li>
+      <li>InstallBlackWidowSleipnirArm</li>
+      <li>InstallBlackWidowHeartMind</li>
+      <li>InstallBlackWidowIntegratedBroodMind</li>
+    </recipes>
+  </AlienRace.ThingDef_AlienRace>
+</Defs>

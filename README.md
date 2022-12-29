@@ -6,6 +6,7 @@ Update of Zamnaths mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=1365540920
 
 - Added support for https://steamcommunity.com/sharedfiles/filedetails/?id=2451324814][SYR] Trait Value
+- Removed legacy HugsLib dependency
 
 ![Image](https://i.imgur.com/pufA0kM.png)
 
@@ -77,3 +78,4 @@ Known Bugs:
 
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2243686995]Last updated 2022-12-29
