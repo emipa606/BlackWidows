@@ -78,4 +78,5 @@ Known Bugs:
 
 
 
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2243686995]Last updated 2022-12-29
+
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2243686995]Last updated 2023-01-09
