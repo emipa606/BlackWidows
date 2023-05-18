@@ -149,6 +149,7 @@
       <solid>true</solid>
       <partEfficiency>0.92</partEfficiency>
     </addedPartProps>
+    <countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
   </HediffDef>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>CoreMind</defName>
